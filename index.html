@@ -1,157 +1,927 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FDA登録代行・MoCRA対応ならワールドシフト｜FDA認証からAmazon販売まで一括支援</title>
-  <meta name="description" content="FDA登録代行、MoCRA対応、US Agent手配、Amazon.com販売支援までワンストップ対応。食品・化粧品の米国輸出をワールドシフトがサポートします。" />
-  <meta property="og:title" content="FDA登録代行・MoCRA対応ならワールドシフト" />
-  <meta property="og:description" content="FDA対応から輸出開始まで。一気通貫で任せられる、頼れるパートナー。" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://worldshift-inc.jp/fda/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>米Amazon輸出の手引き｜相乗り出品マニュアル</title>
+  <style>
+    :root {
+      --main: #1f2937;
+      --main-2: #111827;
+      --accent: #f59e0b;
+      --accent-soft: #fff7e6;
+      --blue: #2563eb;
+      --blue-soft: #eff6ff;
+      --red: #dc2626;
+      --red-soft: #fff1f1;
+      --green: #16a34a;
+      --green-soft: #f0fdf4;
+      --gray: #f3f4f6;
+      --line: #e5e7eb;
+      --text: #222;
+      --muted: #667085;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      color: var(--text);
+      background: #f8fafc;
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      background: var(--main-2);
+      color: #fff;
+      padding: 12px 20px;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+      color: #fff;
+      padding: 44px 20px 38px;
+    }
+
+    .header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(245, 158, 11, .18);
+      color: #fde68a;
+      border: 1px solid rgba(253, 230, 138, .4);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.35;
+      margin: 0 0 12px;
+      letter-spacing: .02em;
+    }
+
+    .lead {
+      max-width: 850px;
+      margin: 0;
+      color: #e5e7eb;
+      font-size: 17px;
+    }
+
+    .layout {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 20px 80px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+    }
+
+    aside {
+      position: sticky;
+      top: 18px;
+      align-self: start;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, .06);
+    }
+
+    aside h2 {
+      margin: 0 0 12px;
+      font-size: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    aside a {
+      display: block;
+      text-decoration: none;
+      color: #374151;
+      font-size: 14px;
+      padding: 8px 0;
+      border-bottom: 1px dashed #edf0f4;
+    }
+
+    aside a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    section {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 30px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, .05);
+    }
+
+    section h2 {
+      margin: 0 0 20px;
+      font-size: 25px;
+      line-height: 1.45;
+      border-left: 6px solid var(--accent);
+      padding-left: 14px;
+    }
+
+    section h3 {
+      margin-top: 30px;
+      font-size: 19px;
+      color: #111827;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+    }
+
+    section h4 {
+      margin: 22px 0 8px;
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul, ol {
+      margin-top: 8px;
+    }
+
+    .flow {
+      counter-reset: flow;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+    }
+
+    .flow li {
+      counter-increment: flow;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: #fff;
+    }
+
+    .flow li::before {
+      content: counter(flow, decimal-leading-zero);
+      display: block;
+      color: var(--accent);
+      font-weight: 800;
+      margin-bottom: 4px;
+      font-size: 18px;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+      margin: 18px 0 20px;
+    }
+
+    .meta-card {
+      background: #f9fafb;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+
+    .meta-card strong {
+      display: block;
+      color: #111827;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .box {
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 20px 0;
+    }
+
+    .point {
+      background: var(--blue-soft);
+      border-left: 5px solid var(--blue);
+    }
+
+    .warning {
+      background: var(--red-soft);
+      border-left: 5px solid var(--red);
+    }
+
+    .success {
+      background: var(--green-soft);
+      border-left: 5px solid var(--green);
+    }
+
+    .cta {
+      background: var(--accent-soft);
+      border: 2px solid #fbbf24;
+      border-radius: 16px;
+      padding: 20px;
+      margin: 24px 0;
+    }
+
+    .cta strong {
+      display: block;
+      font-size: 18px;
+      color: #92400e;
+      margin-bottom: 6px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+    }
+
+    .steps li {
+      counter-increment: step;
+      position: relative;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px 18px 16px 58px;
+      margin-bottom: 12px;
+    }
+
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      line-height: 28px;
+      font-weight: 800;
+    }
+
+    .steps strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #111827;
+    }
+
+    .steps p {
+      margin: 0;
+      color: #4b5563;
+    }
+
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .checklist li {
+      position: relative;
+      padding: 9px 0 9px 34px;
+      border-bottom: 1px dashed #e7eaf0;
+    }
+
+    .checklist li::before {
+      content: "□";
+      position: absolute;
+      left: 4px;
+      color: var(--accent);
+      font-weight: 900;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      background: #fff;
+    }
+
+    th, td {
+      border: 1px solid var(--line);
+      padding: 12px 14px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: #f9fafb;
+      color: #111827;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer {
+      text-align: center;
+      color: #6b7280;
+      font-size: 13px;
+      padding: 32px 20px;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        display: block;
+      }
+      aside {
+        position: static;
+        margin-bottom: 22px;
+      }
+      section {
+        padding: 22px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="WorldShift FDA Support">
-      <span class="brand-mark">W</span><span>WORLDSHIFT</span>
-    </a>
-    <nav class="nav" aria-label="メインナビゲーション">
-      <a href="#services">サービス</a>
-      <a href="#flow">流れ</a>
-      <a href="#strength">強み</a>
-      <a class="nav-cta" href="#contact">無料相談</a>
-    </nav>
-    <button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false">☰</button>
+  <div class="topbar">WorldShift｜米Amazon輸出 初心者向け実務マニュアル</div>
+
+  <header>
+    <div class="header-inner">
+      <span class="badge">相乗り出品版・新規商品ページ作成なし</span>
+      <h1>米Amazon輸出の手引き</h1>
+      <p class="lead">
+        日本の商品を米Amazonへ相乗り出品するための実務マニュアルです。
+        商品リサーチ、アカウント作成、海外口座、商品登録、FBA納品、発送、販売開始後の運用まで、作業順に確認できます。
+      </p>
+    </div>
   </header>
 
-  <main id="top">
-    <section class="hero section">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">FDA COMPLIANCE PARTNER</p>
-          <h1>FDA対応から<br>輸出開始まで。</h1>
-          <p class="lead">書類作成・英語対応・米国代理人手配・MoCRA対応まで。認証取得だけでなく、Amazon販売・物流・運用まで一括でお任せください。</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#contact">まず無料で相談する</a>
-            <a class="button ghost" href="#services">サービスを見る</a>
-          </div>
-          <div class="tags" aria-label="対応領域">
-            <span>FDA登録代行</span><span>MoCRA対応</span><span>US Agent手配</span><span>Amazon販売</span><span>物流・通関代行</span>
-          </div>
-        </div>
-        <div class="hero-card" aria-label="実績">
-          <p class="card-kicker">WORLDSHIFT RESULTS</p>
-          <div class="metrics">
-            <div><strong>100+</strong><span>FDA対応実績<br>食品・化粧品など</span></div>
-            <div><strong>3in1</strong><span>認証 × Amazon<br>× 物流ワンストップ</span></div>
-            <div><strong>Full</strong><span>認証後も継続サポート<br>更新・監査まで対応</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div class="layout">
+    <aside>
+      <h2>目次</h2>
+      <a href="#overview">全体像</a>
+      <a href="#step1">① 商品の目星をつける</a>
+      <a href="#step2">② アカウント作成</a>
+      <a href="#step3">③ 海外口座開設</a>
+      <a href="#step4">④ 出品商品を決める</a>
+      <a href="#step5">⑤ 商品登録</a>
+      <a href="#step6">⑥ 納品作業</a>
+      <a href="#step7">⑦ 発送作業</a>
+      <a href="#step8">⑧ 倉庫到着確認</a>
+      <a href="#step9">⑨ 販売開始</a>
+      <a href="#step10">⑩ 継続作業</a>
+      <a href="#faq">FAQ</a>
+    </aside>
 
-    <section class="section pain" id="pain">
-      <div class="container">
-        <div class="section-title">
-          <p class="eyebrow">PAIN POINTS</p>
-          <h2>こんなお悩みありませんか？</h2>
+    <main>
+      <section id="overview">
+        <h2>このマニュアルについて</h2>
+        <p>
+          このマニュアルは、日本の商品を仕入れて米Amazonで販売する「米Amazon輸出」の始め方をまとめたものです。
+          今回は、既にAmazon.com上に存在する商品ページへ出品する<strong>相乗り出品</strong>を前提にしています。
+        </p>
+        <div class="box success">
+          <strong>重要</strong>
+          <p>
+            このマニュアルでは、新規商品ページの作成、ブランド登録、UPC取得を前提にした販売方法は扱いません。
+            初心者がまず実践しやすい「既存ページへの相乗り出品」に絞っています。
+          </p>
         </div>
-        <div class="pain-grid">
-          <article><span class="mini-icon">!</span><h3>なるべく早くFDA取得したい</h3><p>急いでいるが何から手を付けるべきか分からない</p></article>
-          <article><span class="mini-icon">⚑</span><h3>FDAで止められた、対応してほしい</h3><p>通関トラブルが発生し、早急な解決策が必要</p></article>
-          <article><span class="mini-icon">?</span><h3>何から準備すればいいか分からない</h3><p>必要書類・手順・費用感がまったく見えない</p></article>
-          <article><span class="mini-icon">✓</span><h3>自社だけで対応できるか不安</h3><p>社内に専門知識がなく、ミスが怖い</p></article>
-          <article><span class="mini-icon">EN</span><h3>FDAやMoCRAが難しい</h3><p>英語・専門用語ばかりで手が止まる</p></article>
-          <article><span class="mini-icon">¥</span><h3>費用・期間がどれくらいか知りたい</h3><p>スケジュールと予算感が見えないと動けない</p></article>
-          <article><span class="mini-icon">B</span><h3>バイヤーからFDA対応を求められた</h3><p>商談は進んでいるが認証が間に合っていない</p></article>
-          <article><span class="mini-icon">人</span><h3>社内に専門知識がない</h3><p>やる気はあるが人材・ノウハウが足りない</p></article>
-          <article><span class="mini-icon">EC</span><h3>AmazonでEC販売を始めたい</h3><p>認証後の販売・物流まで一括で頼みたい</p></article>
-        </div>
-      </div>
-    </section>
 
-    <section class="section services" id="services">
-      <div class="container">
-        <div class="section-title narrow">
-          <p class="eyebrow">OUR SERVICES</p>
-          <h2>ワールドシフトのサービス</h2>
-          <p>必要な範囲だけスポット依頼もOK。認証から販売・物流まで、フル支援も選べます。</p>
-        </div>
-        <div class="service-list">
-          <article class="service-card"><div class="service-num">01</div><div class="icon-circle">⌘</div><div><h3>FDA登録・MoCRA対応代行</h3><p>アカウント作成・DUNS番号取得・成分情報提出・MoCRA対応まで。英語対応・US Agent手配も込みで全て代行します。</p></div><span class="badge">コア</span></article>
-          <article class="service-card"><div class="service-num">02</div><div class="icon-circle">文</div><div><h3>ラベル・英文書類作成サポート</h3><p>FDA規制準拠のラベル設計・英文翻訳・成分表記確認。不備による差し戻しを防ぎます。</p></div><span class="badge">必須</span></article>
-          <article class="service-card"><div class="service-num">03</div><div class="icon-circle">↻</div><div><h3>認証後の運用・更新・監査対応</h3><p>登録更新・事前通知対応・FSVPエージェント連携など、継続運用まで一括で担います。</p></div><span class="badge">継続</span></article>
-          <article class="service-card"><div class="service-num">04</div><div class="icon-circle">🛒</div><div><h3>Amazon.com出品・販売サポート</h3><p>アカウント開設・商品ページ作成・FBA納品・広告運用まで。認証を売上につなげます。</p></div><span class="badge">拡張</span></article>
-          <article class="service-card"><div class="service-num">05</div><div class="icon-circle">🚚</div><div><h3>物流・通関・発送代行（SLC）</h3><p>検品・ラベル貼付・輸出・FBA納品まで自社倉庫で一括管理。スポット依頼にも対応します。</p></div><span class="badge">物流</span></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section flow" id="flow">
-      <div class="container">
-        <div class="section-title">
-          <p class="eyebrow">HOW IT WORKS</p>
-          <h2>ご相談から輸出開始までの流れ</h2>
-        </div>
-        <ol class="timeline">
-          <li><span>1</span><div><h3>ヒアリング・製品確認（無料）</h3><p>製品の種類・輸出先・現状をお伺いし、必要な範囲と最適なプランをご提案します。</p><small>通常2営業日以内に返信</small></div></li>
-          <li><span>2</span><div><h3>必要書類・成分情報の整備</h3><p>FDA登録に必要なアカウント作成・DUNS取得・成分情報の収集をサポートします。</p><small>書類準備フェーズ</small></div></li>
-          <li><span>3</span><div><h3>FDA登録・MoCRA申請の代行</h3><p>専門スタッフが申請作業を代行。US Agentとの連携も一括対応し、進捗を共有します。</p><small>申請・審査フェーズ</small></div></li>
-          <li><span>4</span><div><h3>認証取得後の輸出・Amazon販売開始</h3><p>Amazon出品・物流・FBA納品まで一括サポート。自社倉庫での検品・発送代行も可能です。</p><small>輸出・販売フェーズ</small></div></li>
-          <li><span>5</span><div><h3>更新・監査・売上拡大まで伴走</h3><p>更新手続き・追加製品登録・監査対応まで継続してサポートします。</p><small>継続運用フェーズ</small></div></li>
+        <h3>全体の流れ</h3>
+        <ol class="flow">
+          <li>販売する商品の目星をつける</li>
+          <li>Amazon出品アカウントを作成する</li>
+          <li>海外口座を開設する</li>
+          <li>出品する商品を決める</li>
+          <li>商品登録を行う</li>
+          <li>FBA納品作業を行う</li>
+          <li>米国Amazon倉庫へ発送する</li>
+          <li>倉庫到着と在庫反映を確認する</li>
+          <li>販売開始と価格調整を行う</li>
+          <li>在庫補充と新規商品リサーチを続ける</li>
         </ol>
-      </div>
-    </section>
+      </section>
 
-    <section class="section strength" id="strength">
-      <div class="container">
-        <div class="section-title narrow">
-          <p class="eyebrow">WHY WORLDSHIFT</p>
-          <h2>ワールドシフトの4つの強み</h2>
-          <p>単なる申請代行ではなく、認証を売上につなげる総合支援体制が私たちの強みです。</p>
+      <section id="step1">
+        <h2>① 販売する商品の目星をつける</h2>
+        <div class="meta-grid">
+          <div class="meta-card"><strong>作業時間目安</strong>1〜3時間</div>
+          <div class="meta-card"><strong>目的</strong>売れそうな商品ジャンルを把握する</div>
+          <div class="meta-card"><strong>完了条件</strong>候補商品を複数リストアップする</div>
         </div>
-        <div class="strength-grid">
-          <article><h3>認証から販売まで<br>ワンストップで完結</h3><p>FDA認証の専門家とAmazon・物流・マーケティングの実務チームが社内連携。</p><strong>✓ 窓口が一つで管理がシンプル</strong></article>
-          <article><h3>取得後の継続運用まで<br>責任をもってサポート</h3><p>登録更新・PN対応・FSVPエージェント連携・追加製品登録なども担います。</p><strong>✓ 更新忘れ・トラブルのリスクを低減</strong></article>
-          <article><h3>自社倉庫（SLC）で<br>物流も一括管理</h3><p>FDA対策・検品・ラベル貼付・輸出・FBA納品までスムーズに一括管理。</p><strong>✓ 輸出までの全工程をシームレスに</strong></article>
-          <article><h3>認証を「売上」に直結する<br>販路提案と市場調査</h3><p>Amazon.com・自社EC・現地卸など最適な販路をご提案します。</p><strong>✓ 認証取得が具体的な成果につながる</strong></article>
-        </div>
-      </div>
-    </section>
 
-    <section class="section future">
-      <div class="container future-box">
-        <div>
-          <p class="eyebrow">AFTER FDA</p>
-          <h2>FDA対応で広がる未来</h2>
-        </div>
-        <div class="future-grid">
-          <article><h3>Amazon.comでアメリカ直販</h3><p>日本製品の信頼性と巨大市場で安定した売上を目指します。</p></article>
-          <article><h3>現地卸・バイヤーへの販路開拓</h3><p>FDA取得済みの証明が、現地バイヤーとの商談を加速します。</p></article>
-          <article><h3>越境ECでグローバル展開</h3><p>自社ECや越境ECプラットフォームでの販売へ拡張できます。</p></article>
-        </div>
-      </div>
-    </section>
+        <p>
+          まずは、どんな商品が米Amazonで売れているのか、自分が扱うとしたらどんな商材がいいのかの目星をつけましょう。
+          この段階では「候補を広く出す」ことが目的です。
+        </p>
 
-    <section class="section cta" id="contact">
-      <div class="container cta-box">
-        <p class="eyebrow">CONTACT</p>
-        <h2>まず、お気軽にご相談ください。</h2>
-        <p>FDA対応の範囲・費用・スケジュールを無料でご確認いただけます。御社の製品に合った最適なプランをご提案します。</p>
-        <a class="button primary large" href="mailto:syutoku@worldshift-inc.com?subject=FDA対応について無料相談">無料相談する</a>
-        <small>※フォーム導入時は、このボタンのリンクをHubSpotまたはGoogleフォームURLに差し替えてください。</small>
-      </div>
-    </section>
-  </main>
+        <h3>見るべきポイント</h3>
+        <ul>
+          <li>米Amazonで実際に販売されているか</li>
+          <li>日本で仕入れやすいか</li>
+          <li>販売価格と仕入れ価格に差があるか</li>
+          <li>軽くて壊れにくいか</li>
+          <li>規制や出品制限が強すぎないか</li>
+          <li>ライバルが多すぎないか</li>
+        </ul>
 
-  <footer class="footer">
-    <div class="container">© 2025 WorldShift Inc.  |  福岡県福岡市東区東浜1-13-32  |  worldshift-inc.jp</div>
-  </footer>
-  <script src="js/main.js"></script>
+        <div class="box warning">
+          <strong>初心者が注意したい商品</strong>
+          <p>
+            食品、医薬品、化粧品、電化製品、ブランド品は、輸入規制・出品制限・真贋確認などのリスクがあります。
+            最初はなるべく扱いやすい商品から始めましょう。
+          </p>
+        </div>
+
+        <div class="cta">
+          <strong>⭐ ProFinderなら！</strong>
+          <p>
+            ProFinderなら、無料で商品リサーチが可能です。
+            簡単に利益の出る商品を見つけたい方は、こちらから無料申し込みをご活用ください。
+          </p>
+          <a href="#" class="btn">無料申し込みはこちら</a>
+        </div>
+
+        <h3>完了チェックリスト</h3>
+        <ul class="checklist">
+          <li>候補商品を複数リストアップした</li>
+          <li>米Amazonで販売されていることを確認した</li>
+          <li>日本で仕入れできることを確認した</li>
+          <li>規制が強そうな商品を避けた</li>
+        </ul>
+      </section>
+
+      <section id="step2">
+        <h2>② アカウントを作成する</h2>
+        <div class="meta-grid">
+          <div class="meta-card"><strong>作業時間目安</strong>30分〜2時間</div>
+          <div class="meta-card"><strong>目的</strong>米Amazonで販売する準備を整える</div>
+          <div class="meta-card"><strong>完了条件</strong>Seller Centralにログインできる</div>
+        </div>
+
+        <p>
+          商品の目星がついて、輸出ビジネスのイメージがついてきたら、出品に向けて準備を開始します。
+          まずは米Amazonの出品アカウントを作成します。
+        </p>
+
+        <h3>必要なもの</h3>
+        <ul>
+          <li>パスポートまたは運転免許証</li>
+          <li>銀行口座</li>
+          <li>クレジットカード</li>
+          <li>電話番号</li>
+          <li>住所確認書類</li>
+          <li>事業者情報または個人情報</li>
+        </ul>
+
+        <div class="box warning">
+          <strong>⚠️ アカウント作成時は慎重に行ってください</strong>
+          <p>
+            一つでも情報や対応を誤ると、審査が止まったり、販売開始が遅れる可能性があります。
+            また次の工程の海外口座の開設も関連するため、同時に進めることをおすすめします。
+          </p>
+        </div>
+
+        <h3>作業手順</h3>
+        <ol class="steps">
+          <li><strong>登録ページへアクセス</strong><p>Amazon Seller Centralの登録ページを開きます。</p></li>
+          <li><strong>ログイン情報を作成</strong><p>メールアドレスとパスワードを設定します。</p></li>
+          <li><strong>個人または法人情報を入力</strong><p>登録者名、住所、電話番号などを入力します。</p></li>
+          <li><strong>本人確認書類を提出</strong><p>登録情報と一致する書類を提出します。</p></li>
+          <li><strong>クレジットカードを登録</strong><p>月額費用や手数料決済用のカードを登録します。</p></li>
+          <li><strong>税務情報を入力</strong><p>案内に沿って税務情報を入力します。</p></li>
+          <li><strong>審査結果を確認</strong><p>追加対応が必要な場合は、指示に沿って対応します。</p></li>
+        </ol>
+
+        <div class="cta">
+          <strong>⭐ アカウント作成が不安な方へ</strong>
+          <p>
+            英語での登録や書類提出に不安がある方は、ワールドシフトのサポートをご活用ください。
+            重要ポイントを確認しながら、確実な開設を目指します。
+          </p>
+          <a href="#" class="btn">スポットコンサルを確認する</a>
+        </div>
+      </section>
+
+      <section id="step3">
+        <h2>③ 海外口座を開設する</h2>
+        <div class="meta-grid">
+          <div class="meta-card"><strong>作業時間目安</strong>30分〜1時間</div>
+          <div class="meta-card"><strong>目的</strong>米Amazonの売上金を受け取る</div>
+          <div class="meta-card"><strong>完了条件</strong>Amazonに登録できる受取口座を用意する</div>
+        </div>
+
+        <p>
+          売上金を受け取るための海外口座を開設します。
+          アカウント作成情報と紐づける必要があるため、名義や住所情報の整合性に注意しましょう。
+        </p>
+
+        <h3>代表的な海外口座サービス</h3>
+        <ul>
+          <li>Payoneer</li>
+          <li>WorldFirst</li>
+          <li>Wise Business</li>
+          <li>米国銀行口座</li>
+        </ul>
+
+        <h3>比較するポイント</h3>
+        <table>
+          <tr><th>項目</th><th>確認内容</th></tr>
+          <tr><td>対応状況</td><td>Amazon.comの売上受取に対応しているか</td></tr>
+          <tr><td>手数料</td><td>為替手数料や出金手数料はいくらか</td></tr>
+          <tr><td>使いやすさ</td><td>日本円への出金がしやすいか</td></tr>
+          <tr><td>サポート</td><td>日本語サポートがあるか</td></tr>
+        </table>
+
+        <div class="cta">
+          <strong>⭐ 海外口座開設を検討中の方へ</strong>
+          <p>
+            ワールドシフトを経由して開設いただくと、特典を受け取れる場合があります。
+            該当海外口座の詳細や特典についてはスポットコンサルで確認できます。
+          </p>
+          <a href="#" class="btn">海外口座サポートを確認する</a>
+        </div>
+      </section>
+
+      <section id="step4">
+        <h2>④ 出品する商品を決める</h2>
+        <div class="meta-grid">
+          <div class="meta-card"><strong>作業時間目安</strong>2〜5時間</div>
+          <div class="meta-card"><strong>目的</strong>実際に仕入れる商品を決める</div>
+          <div class="meta-card"><strong>完了条件</strong>利益が見込める商品を選定する</div>
+        </div>
+
+        <p>
+          ①で目星をつけた商品を再度詳細にリサーチします。
+          本当に利益が出るのか、どれくらい仕入れるべきなのか、他に仕入れた方がいい商品はあるのか、
+          物流コストも考えたらどうなるのかを確認します。
+        </p>
+
+        <h3>確認する項目</h3>
+        <table>
+          <tr><th>項目</th><th>確認内容</th></tr>
+          <tr><td>米Amazon販売価格</td><td>現在の販売価格と価格推移を確認する</td></tr>
+          <tr><td>仕入れ価格</td><td>日本国内で安定して仕入れられるか確認する</td></tr>
+          <tr><td>Amazon手数料</td><td>販売手数料、FBA手数料を確認する</td></tr>
+          <tr><td>国際送料</td><td>重量とサイズから発送コストを見積もる</td></tr>
+          <tr><td>競合状況</td><td>出品者数、価格競争、レビュー数を確認する</td></tr>
+          <tr><td>出品制限</td><td>仕入れ前に販売できる商品か確認する</td></tr>
+        </table>
+
+        <div class="box point">
+          <strong>利益計算式</strong>
+          <p>販売価格 − Amazon手数料 − FBA手数料 − 国際送料 − 商品原価 − その他費用 ＝ 利益</p>
+        </div>
+
+        <div class="box warning">
+          <strong>よくある失敗</strong>
+          <p>
+            価格差だけを見て仕入れると、手数料や国際送料を差し引いた後に赤字になることがあります。
+            必ず総コストで判断しましょう。
+          </p>
+        </div>
+
+        <div class="cta">
+          <strong>⭐ ProFinderでは</strong>
+          <p>
+            ProFinderをご利用いただくと、利益の出る商品を効率よく見つけることができます。
+            商品選定に迷っている方はぜひご活用ください。
+          </p>
+          <a href="#" class="btn">ProFinderを確認する</a>
+        </div>
+      </section>
+
+      <section id="step5">
+        <h2>⑤ 商品登録を行う</h2>
+        <div class="meta-grid">
+          <div class="meta-card"><strong>作業時間目安</strong>10〜30分</div>
+          <div class="meta-card"><strong>目的</strong>既存の商品ページへ相乗り出品する</div>
+          <div class="meta-card"><strong>完了条件</strong>FBA出品として登録が完了している</div>
+        </div>
+
+        <p>
+          仕入れる商品が決まったら、Amazon Seller Centralから商品登録を行います。
+          今回の米Amazon輸出では、既にAmazon.com上に存在する商品ページへ出品する
+          <strong>「相乗り出品」</strong>が基本です。
+        </p>
+
+        <div class="box success">
+          <strong>今回、新規商品ページ作成は不要です</strong>
+          <p>
+            自分で新しく商品ページを作成するのではなく、既に存在する商品ページを検索し、その商品ページに出品します。
+            そのため、UPCコード取得、ブランド登録、新規ページ作成用の商品画像・説明文作成などは今回の手順では扱いません。
+          </p>
+        </div>
+
+        <h3>事前に準備するもの</h3>
+        <ul>
+          <li>Seller Centralログイン情報</li>
+          <li>商品名</li>
+          <li>JANコード</li>
+          <li>ASIN</li>
+          <li>販売予定価格</li>
+          <li>利益計算結果</li>
+        </ul>
+
+        <h3>作業手順</h3>
+        <ol class="steps">
+          <li><strong>Seller Centralへログインする</strong><p>Amazon Seller Centralへログインします。</p></li>
+          <li><strong>「カタログ」から「商品登録」を選択する</strong><p>商品登録画面を開きます。</p></li>
+          <li><strong>商品を検索する</strong><p>商品名、JANコード、ASINのいずれかで検索します。</p></li>
+          <li><strong>該当商品を選択する</strong><p>仕入れる商品と完全に一致する商品ページを選びます。</p></li>
+          <li><strong>商品情報を確認する</strong><p>商品画像、型番、サイズ、色、セット内容、JANコードを確認します。</p></li>
+          <li><strong>出品制限を確認する</strong><p>出品許可が必要な商品ではないか確認します。</p></li>
+          <li><strong>販売価格を入力する</strong><p>利益計算後も利益が残る価格を設定します。</p></li>
+          <li><strong>コンディションを選択する</strong><p>新品で販売する場合は「New」を選択します。</p></li>
+          <li><strong>出荷方法をFBAに設定する</strong><p>「Fulfilled by Amazon」または「Amazonから出荷」を選択します。</p></li>
+          <li><strong>保存する</strong><p>内容を確認し、出品登録を保存します。</p></li>
+        </ol>
+
+        <h3>確認ポイント</h3>
+        <table>
+          <tr><th>確認項目</th><th>確認内容</th></tr>
+          <tr><td>ASIN</td><td>仕入れる商品と完全に一致しているか</td></tr>
+          <tr><td>商品仕様</td><td>サイズ・色・型番・セット内容が同じか</td></tr>
+          <tr><td>出品制限</td><td>出品許可申請が必要ではないか</td></tr>
+          <tr><td>販売価格</td><td>手数料・送料を差し引いて利益が残るか</td></tr>
+          <tr><td>出荷方法</td><td>FBA出品になっているか</td></tr>
+        </table>
+
+        <div class="box warning">
+          <strong>よくある失敗</strong>
+          <ul>
+            <li>似ている別商品ページに出品してしまう</li>
+            <li>出品制限を確認せずに仕入れてしまう</li>
+            <li>利益計算をせず、販売後に赤字になる</li>
+            <li>FBAではなく自己発送で登録してしまう</li>
+          </ul>
+        </div>
+
+        <h3>完了チェックリスト</h3>
+        <ul class="checklist">
+          <li>正しいASINに出品している</li>
+          <li>商品仕様を確認した</li>
+          <li>出品制限を確認した</li>
+          <li>利益計算を行った</li>
+          <li>販売価格を設定した</li>
+          <li>FBA出品として登録した</li>
+        </ul>
+      </section>
+
+      <section id="step6">
+        <h2>⑥ 納品作業を行う</h2>
+        <div class="meta-grid">
+          <div class="meta-card"><strong>作業時間目安</strong>30分〜2時間</div>
+          <div class="meta-card"><strong>目的</strong>FBA倉庫へ送る準備をする</div>
+          <div class="meta-card"><strong>完了条件</strong>納品プランとラベル貼付を完了する</div>
+        </div>
+
+        <p>
+          次に行うのは、FBA倉庫に送るための納品プラン作成と、商品へのFBAラベル貼り付けです。
+        </p>
+
+        <h3>作業手順</h3>
+        <ol class="steps">
+          <li><strong>FBA納品プランを作成する</strong><p>Seller Centralで納品する商品と数量を入力します。</p></li>
+          <li><strong>納品先倉庫を確認する</strong><p>Amazonから指定される倉庫住所を確認します。</p></li>
+          <li><strong>FNSKUラベルを発行する</strong><p>商品ごとのFBAラベルを発行します。</p></li>
+          <li><strong>商品にラベルを貼る</strong><p>既存バーコードを隠す形で正しく貼付します。</p></li>
+          <li><strong>商品を箱詰めする</strong><p>破損しないよう梱包します。</p></li>
+          <li><strong>箱ラベルを貼る</strong><p>外箱にFBA箱ラベルを貼付します。</p></li>
+        </ol>
+
+        <div class="box warning">
+          <strong>ラベル貼付の注意</strong>
+          <p>
+            ラベルが読み取れない、間違った商品に貼られている、バーコードが隠れていない場合、
+            受領遅延や納品不備につながります。
+          </p>
+        </div>
+
+        <h3>完了チェックリスト</h3>
+        <ul class="checklist">
+          <li>納品プランを作成した</li>
+          <li>納品数量を確認した</li>
+          <li>FNSKUラベルを発行した</li>
+          <li>商品ごとに正しくラベルを貼った</li>
+          <li>箱ラベルを発行した</li>
+          <li>外箱へ箱ラベルを貼った</li>
+        </ul>
+      </section>
+
+      <section id="step7">
+        <h2>⑦ 発送作業を行う</h2>
+        <div class="meta-grid">
+          <div class="meta-card"><strong>作業時間目安</strong>30分〜1時間</div>
+          <div class="meta-card"><strong>目的</strong>商品を米国FBA倉庫へ発送する</div>
+          <div class="meta-card"><strong>完了条件</strong>追跡可能な状態で発送する</div>
+        </div>
+
+        <p>
+          納品準備が完了したら、指定されたFBA倉庫へ商品を発送します。
+          海外発送では追跡番号と書類管理が重要です。
+        </p>
+
+        <h3>海外発送の手順</h3>
+        <ol class="steps">
+          <li><strong>発送先FBA倉庫を確認する</strong><p>納品プランで指定された住所を確認します。</p></li>
+          <li><strong>配送業者または発送代行業者を選ぶ</strong><p>料金、配送日数、追跡可否を確認します。</p></li>
+          <li><strong>インボイスを作成する</strong><p>商品名、数量、価格、発送先情報を記載します。</p></li>
+          <li><strong>配送ラベルを作成する</strong><p>配送業者のルールに沿って作成します。</p></li>
+          <li><strong>外箱にラベルを貼る</strong><p>配送ラベルとFBA箱ラベルを見やすい位置に貼ります。</p></li>
+          <li><strong>発送し追跡番号を保存する</strong><p>トラブル時に備えて必ず記録します。</p></li>
+        </ol>
+
+        <div class="box point">
+          <strong>発送代行業者の活用</strong>
+          <p>
+            初心者の方は、海外発送やインボイス作成に慣れるまで発送代行業者を利用するのも選択肢です。
+            梱包、ラベル貼付、発送まで任せられる場合があります。
+          </p>
+        </div>
+      </section>
+
+      <section id="step8">
+        <h2>⑧ 倉庫に到着</h2>
+        <div class="meta-grid">
+          <div class="meta-card"><strong>作業時間目安</strong>毎日5〜10分</div>
+          <div class="meta-card"><strong>目的</strong>在庫反映まで確認する</div>
+          <div class="meta-card"><strong>完了条件</strong>販売可能在庫に反映される</div>
+        </div>
+
+        <p>
+          商品が無事倉庫についたか日々確認しましょう。
+          海外発送では発送途中で紛失したり、倉庫にはついたはずなのに在庫に反映されないなど、さまざまなトラブルが発生します。
+        </p>
+
+        <h3>確認すること</h3>
+        <ul>
+          <li>配送業者の追跡情報</li>
+          <li>Amazon倉庫での受領状況</li>
+          <li>納品数と受領数の差異</li>
+          <li>販売可能在庫への反映状況</li>
+        </ul>
+
+        <div class="box warning">
+          <strong>在庫差異がある場合</strong>
+          <p>
+            倉庫到着後に紛失や数量差異が発生した場合、Amazonへ問い合わせることで補填される可能性があります。
+            発送記録、追跡番号、納品プラン情報を必ず保管しておきましょう。
+          </p>
+        </div>
+      </section>
+
+      <section id="step9">
+        <h2>⑨ 販売開始！</h2>
+        <div class="meta-grid">
+          <div class="meta-card"><strong>作業時間目安</strong>毎日10〜20分</div>
+          <div class="meta-card"><strong>目的</strong>売上を作る</div>
+          <div class="meta-card"><strong>完了条件</strong>適正価格で販売し利益を残す</div>
+        </div>
+
+        <p>
+          倉庫に到着し、在庫に補充されたら販売開始です。
+          ただし、販売開始後は価格調整を行う必要があります。
+        </p>
+
+        <h3>販売開始後に行うこと</h3>
+        <ul>
+          <li>販売価格を確認する</li>
+          <li>競合出品者の価格を確認する</li>
+          <li>Buy Boxの獲得状況を確認する</li>
+          <li>在庫数を確認する</li>
+          <li>利益が残っているか確認する</li>
+        </ul>
+
+        <div class="box point">
+          <strong>Buy Boxとは</strong>
+          <p>
+            Amazonの商品ページで「カートに入れる」ボタン付近に表示されるおすすめ出品枠のことです。
+            相乗り出品では、このBuy Boxを獲得できるかが売上に大きく影響します。
+          </p>
+        </div>
+
+        <h3>価格調整の考え方</h3>
+        <ul>
+          <li>競合より高すぎると売れにくい</li>
+          <li>安くしすぎると利益が残らない</li>
+          <li>最低利益ラインを決めておく</li>
+          <li>価格変更後の売れ行きを確認する</li>
+        </ul>
+
+        <div class="box warning">
+          <strong>値下げ競争に注意</strong>
+          <p>
+            Buy Boxを狙って価格を下げすぎると、売れても赤字になることがあります。
+            必ず利益計算を行ったうえで価格調整しましょう。
+          </p>
+        </div>
+      </section>
+
+      <section id="step10">
+        <h2>⑩ 継続作業</h2>
+        <div class="meta-grid">
+          <div class="meta-card"><strong>作業時間目安</strong>毎日15〜30分</div>
+          <div class="meta-card"><strong>目的</strong>売上を安定させる</div>
+          <div class="meta-card"><strong>完了条件</strong>補充と新規商品発掘を継続する</div>
+        </div>
+
+        <p>
+          販売中の商品の在庫状況を確認し、補充が必要であれば仕入れを行います。
+          また、新しい商品を発掘し、新たな収入源を増やしていきましょう。
+        </p>
+
+        <h3>継続的に行う作業</h3>
+        <ul>
+          <li>在庫状況を確認する</li>
+          <li>販売数を確認する</li>
+          <li>利益率を見直す</li>
+          <li>競合価格を確認する</li>
+          <li>在庫切れ前に補充する</li>
+          <li>新規商品のリサーチを行う</li>
+        </ul>
+
+        <h3>補充判断のポイント</h3>
+        <table>
+          <tr><th>確認項目</th><th>判断基準</th></tr>
+          <tr><td>販売ペース</td><td>何日で何個売れているか</td></tr>
+          <tr><td>残り在庫</td><td>次回納品まで在庫が持つか</td></tr>
+          <tr><td>利益率</td><td>価格競争後も利益が残っているか</td></tr>
+          <tr><td>仕入れ安定性</td><td>同じ価格で再仕入れできるか</td></tr>
+        </table>
+
+        <div class="cta">
+          <strong>⭐ リサーチ方法について</strong>
+          <p>
+            継続的に利益商品を探すなら、ProFinderの活用がおすすめです。
+            手作業のリサーチ時間を減らし、仕入れ判断に集中できます。
+          </p>
+          <a href="#" class="btn">リサーチ方法を確認する</a>
+        </div>
+      </section>
+
+      <section id="faq">
+        <h2>よくある質問</h2>
+
+        <h3>Q. 今回は新規商品ページを作る必要がありますか？</h3>
+        <p>
+          いいえ。今回の手法は相乗り出品が前提のため、新規商品ページ作成は不要です。
+          既にAmazon.comに存在する商品ページを探して出品します。
+        </p>
+
+        <h3>Q. 初心者はどの商品から始めるべきですか？</h3>
+        <p>
+          軽くて壊れにくく、規制が少なく、仕入れやすい商品がおすすめです。
+          最初は小ロットでテストし、利益が出ることを確認してから補充しましょう。
+        </p>
+
+        <h3>Q. 一番重要な工程はどこですか？</h3>
+        <p>
+          商品リサーチと利益計算です。
+          売れそうに見える商品でも、FBA手数料や国際送料を差し引くと赤字になる場合があります。
+        </p>
+
+        <h3>Q. 販売開始後は何を見ればよいですか？</h3>
+        <p>
+          価格、Buy Box、在庫数、利益率、競合状況を確認しましょう。
+          特に在庫切れと赤字販売には注意が必要です。
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <div class="footer">
+    © WorldShift｜米Amazon輸出の手引き
+  </div>
 </body>
 </html>
