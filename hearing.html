@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>無料相談ヒアリングシート | FDA Compliance Partner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:17.5px}
+:root{
+  --navy:#406AAF; --navy2:#427AB5; --navy3:#6a9fd4;
+  --blue:#427AB5; --blue2:#eef4fc; --blue3:#d0e2f5;
+  --amber:#F7DD7D; --amber2:#FFF8E1;
+  --white:#FFFFFF; --light:#F1F5F9;
+  --ink:#1E293B; --ink2:#475569; --ink3:#94A3B8;
+  --border:#E2E8F0; --border2:#CBD5E1;
+  --green:#059669; --greenl:#ECFDF5; --red:#DC2626;
+  --r:10px; --r2:6px;
+}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:#f7fafd;-webkit-font-smoothing:antialiased;min-height:100vh}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+@keyframes floatUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes blobFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-18px,14px) scale(1.06)}}
+
+/* ── hero ── */
+.hs-hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(120deg,#12294f 0%,#1c3c66 42%,#2f5590 100%);
+  padding:88px 24px 56px;
+}
+.hs-hero::before,.hs-hero::after{
+  content:'';position:absolute;border-radius:50%;filter:blur(50px);pointer-events:none;
+}
+.hs-hero::before{
+  width:300px;height:300px;background:radial-gradient(circle,rgba(247,221,125,.32),transparent 70%);
+  top:-110px;right:-60px;animation:blobFloat 9s ease-in-out infinite;
+}
+.hs-hero::after{
+  width:260px;height:260px;background:radial-gradient(circle,rgba(122,169,224,.38),transparent 70%);
+  bottom:-130px;left:6%;animation:blobFloat 11s ease-in-out infinite reverse;
+}
+.hs-back{
+  position:absolute;top:26px;left:20px;z-index:10;
+  display:inline-flex;align-items:center;gap:7px;font-size:13px;color:#fff;font-weight:600;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:100px;
+  padding:9px 18px 9px 14px;backdrop-filter:blur(6px);transition:all .2s;
+}
+.hs-back svg{width:14px;height:14px;flex-shrink:0;transition:transform .2s;}
+.hs-back:hover{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.45);}
+.hs-back:hover svg{transform:translateX(-3px);}
+.hs-hero-inner{position:relative;z-index:2;max-width:900px;margin:0 auto;}
+.hs-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--amber);margin:0 0 12px;}
+.hs-eyebrow::before{content:'';width:22px;height:1px;background:currentColor;}
+.hs-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,4vw,44px);color:#fff;line-height:1.2;}
+.hs-title em{font-style:italic;color:var(--amber);}
+.hs-sub{font-size:14px;color:rgba(255,255,255,.78);margin-top:14px;line-height:1.85;max-width:600px;}
+.hs-note{
+  display:inline-flex;align-items:center;gap:7px;margin-top:18px;font-size:12.5px;color:#fff;font-weight:500;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:100px;padding:7px 14px;
+}
+.hs-note svg{width:13px;height:13px;color:var(--amber);flex-shrink:0;}
+
+/* ── layout ── */
+.hs-wrap{max-width:900px;margin:-30px auto 100px;padding:0 24px;position:relative;z-index:3;}
+
+.hs-card{
+  background:#fff;border:1px solid rgba(28,60,102,.08);border-radius:20px;
+  box-shadow:0 20px 48px rgba(20,45,85,.1);
+  padding:34px 36px;margin-bottom:22px;position:relative;overflow:hidden;
+  animation:floatUp .5s ease both;
+}
+.hs-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,#F7DD7D,#EEC85A 50%,#F7DD7D);
+}
+.hs-card-head{display:flex;align-items:center;gap:12px;margin-bottom:22px;}
+.hs-card-icon{
+  width:38px;height:38px;border-radius:50%;flex-shrink:0;position:relative;
+  background:linear-gradient(135deg,#4a7bc4,#2f5590);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 14px rgba(64,106,175,.32);
+}
+.hs-card-icon::before{content:'';position:absolute;inset:4px;border-radius:50%;border:1.5px solid rgba(255,255,255,.5);pointer-events:none;}
+.hs-card-icon svg{width:17px;height:17px;}
+.hs-card-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:#1c3c66;}
+
+.hs-q{margin-bottom:24px;}
+.hs-q:last-child{margin-bottom:0;}
+.hs-q-label{font-size:14.5px;font-weight:700;color:var(--ink);line-height:1.7;margin-bottom:4px;}
+.hs-q-label .req{color:var(--red);margin-left:2px;}
+.hs-q-hint{font-size:12.5px;color:var(--ink3);line-height:1.6;margin-bottom:10px;}
+
+.hs-input,.hs-textarea{
+  width:100%;padding:12px 14px;border:1.5px solid var(--border2);border-radius:9px;
+  font-size:14px;font-family:inherit;color:var(--ink);background:#fff;transition:border-color .2s;
+}
+.hs-input:focus,.hs-textarea:focus{outline:none;border-color:var(--navy);}
+.hs-textarea{resize:vertical;min-height:80px;}
+
+.hs-check-grid,.hs-radio-grid{display:flex;flex-direction:column;gap:9px;}
+.hs-check,.hs-radio{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:11px 14px;border:1.5px solid var(--border2);border-radius:9px;
+  cursor:pointer;transition:all .18s;font-size:13.5px;color:var(--ink);line-height:1.6;
+}
+.hs-check:hover,.hs-radio:hover{border-color:var(--navy3);background:var(--blue2);}
+.hs-check input,.hs-radio input{margin-top:2px;accent-color:var(--navy);flex-shrink:0;width:15px;height:15px;}
+.hs-check:has(input:checked),.hs-radio:has(input:checked){
+  border-color:var(--navy);background:var(--blue2);font-weight:600;
+}
+
+.hs-other-input{margin-top:8px;display:none;}
+.hs-other-input.show{display:block;}
+
+.hs-sub-block{
+  margin-top:14px;padding:16px 18px;background:#f8fafc;border-radius:10px;
+  border-left:3px solid var(--navy3);display:none;
+}
+.hs-sub-block.show{display:block;}
+.hs-sub-block-label{font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:10px;}
+
+/* 商品ブロック */
+.hs-product-count{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+.hs-count-btn{
+  width:34px;height:34px;border-radius:50%;border:1.5px solid var(--border2);background:#fff;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--navy);
+  font-size:18px;font-weight:700;transition:all .2s;flex-shrink:0;
+}
+.hs-count-btn:hover{background:var(--blue2);border-color:var(--navy3);}
+.hs-count-btn:disabled{opacity:.35;cursor:not-allowed;}
+.hs-count-num{font-family:'Cormorant Garamond',serif;font-size:30px;color:#1c3c66;min-width:36px;text-align:center;}
+
+.hs-product{
+  margin-top:20px;padding:22px 24px;background:#f8fafc;border-radius:14px;
+  border:1px solid var(--border);position:relative;
+}
+.hs-product-title{
+  font-size:14px;font-weight:700;color:#1c3c66;margin-bottom:16px;
+  display:flex;align-items:center;gap:8px;
+}
+.hs-product-title .badge{
+  width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#4a7bc4,#2f5590);
+  color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.hs-product-row{margin-bottom:14px;}
+.hs-product-row:last-child{margin-bottom:0;}
+.hs-product-row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:640px){.hs-product-row-2{grid-template-columns:1fr;}}
+
+.hs-submit{
+  width:100%;display:flex;align-items:stretch;border-radius:12px;overflow:hidden;
+  border:1.5px solid rgba(28,60,102,.1);box-shadow:0 10px 26px rgba(28,60,102,.2);
+  cursor:pointer;background:none;padding:0;margin-top:8px;transition:transform .2s,box-shadow .2s;
+}
+.hs-submit:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(28,60,102,.28);}
+.hs-submit:disabled{opacity:.55;cursor:not-allowed;transform:none;}
+.hs-submit-icon{
+  width:52px;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#1a3a5a;
+  background:linear-gradient(160deg,#FCEBB0,#F7DD7D 55%,#EEC85A);
+}
+.hs-submit-label{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+  font-size:14.5px;font-weight:700;color:#fff;background:#1c3c66;padding:15px 20px;
+}
+.hs-submit-note{font-size:11.5px;color:var(--ink3);margin-top:10px;text-align:center;}
+
+.hs-status{margin-top:16px;padding:14px 16px;border-radius:10px;font-size:13.5px;display:none;}
+.hs-status.ok{display:block;background:var(--greenl);color:#065f46;border:1px solid rgba(5,150,105,.25);}
+.hs-status.err{display:block;background:#FEF2F2;color:#991B1B;border:1px solid rgba(220,38,38,.25);}
+
+.spinner{
+  width:14px;height:14px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;
+  border-radius:50%;display:inline-block;animation:spin .7s linear infinite;margin-right:6px;vertical-align:-2px;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<div class="hs-hero">
+  <a href="#" class="hs-back" id="hsBack">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+    サービスページに戻る
+  </a>
+  <div class="hs-hero-inner">
+    <div class="hs-eyebrow">PRE-CONSULTATION SHEET</div>
+    <h1 class="hs-title">無料相談<em>ヒアリングシート</em></h1>
+    <p class="hs-sub">
+      無料相談を、より濃い内容にするための事前アンケートです。<br>
+      分かる範囲で構いませんので、ご記入にご協力ください。
+    </p>
+    <div class="hs-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+      所要時間の目安：約5分
+    </div>
+  </div>
+</div>
+
+<form class="hs-wrap" id="hearingForm" novalidate>
+
+  <!-- 💬 現時点のご不安・要望 -->
+  <div class="hs-card">
+    <div class="hs-card-head">
+      <span class="hs-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+      <div class="hs-card-title">現時点のご不安・要望</div>
+    </div>
+    <div class="hs-q">
+      <div class="hs-q-label">FDA認証・米国輸出に関して、特にご懸念のある点やご要望をお聞かせください<span class="req">*</span></div>
+      <div class="hs-q-hint">※複数選択可</div>
+      <div class="hs-check-grid" id="concernGroup">
+        <label class="hs-check"><input type="checkbox" value="輸出予定の商品がFDA認証の対象かどうか分からない">輸出予定の商品がFDA認証の対象かどうか分からない</label>
+        <label class="hs-check"><input type="checkbox" value="FDA認証を取得するために何をすれば良いか分からない">FDA認証を取得するために何をすれば良いか分からない</label>
+        <label class="hs-check"><input type="checkbox" value="認証取得の業務を代行してほしい">認証取得の業務を代行してほしい</label>
+        <label class="hs-check"><input type="checkbox" value="既に認証は取得しているが、施設登録の更新や乗り換えを検討している">既に認証は取得しているが、施設登録の更新や乗り換えを検討している</label>
+        <label class="hs-check"><input type="checkbox" value="ラベル表記や成分表示の作成を依頼したい">ラベル表記や成分表示の作成を依頼したい</label>
+        <label class="hs-check"><input type="checkbox" value="輸出時の規制等がわからない">輸出時の規制等がわからない</label>
+        <label class="hs-check"><input type="checkbox" value="輸出に伴う作業などをすべて依頼したい">輸出に伴う作業などをすべて依頼したい</label>
+        <label class="hs-check"><input type="checkbox" value="費用や期間の目安を把握したい">費用や期間の目安を把握したい</label>
+        <label class="hs-check"><input type="checkbox" value="その他" data-other-toggle="concernOther">その他（ご記載ください）</label>
+      </div>
+      <input type="text" class="hs-input hs-other-input" id="concernOther" placeholder="その他の内容をご記入ください">
+    </div>
+  </div>
+
+  <!-- 🚨 FDA認証取得経験 -->
+  <div class="hs-card">
+    <div class="hs-card-head">
+      <span class="hs-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg></span>
+      <div class="hs-card-title">FDA認証取得経験</div>
+    </div>
+    <div class="hs-q">
+      <div class="hs-q-label">これまでに、FDA認証に関してどのようなご対応をされたことがありますか？<span class="req">*</span></div>
+      <div class="hs-radio-grid" id="experienceGroup">
+        <label class="hs-radio"><input type="radio" name="experience" value="実際に認証取得のための業務を行ったことがある">実際に認証取得のための業務を行ったことがある</label>
+        <label class="hs-radio"><input type="radio" name="experience" value="情報収集はしたことがある">情報収集はしたことがある</label>
+        <label class="hs-radio"><input type="radio" name="experience" value="まだ特に対応はしていない">まだ特に対応はしていない</label>
+      </div>
+
+      <div class="hs-sub-block" id="expSubA">
+        <div class="hs-sub-block-label">「実際に認証取得のための業務を行ったことがある」とお答えの方へ — その際はどのように対応されましたか？</div>
+        <div class="hs-radio-grid">
+          <label class="hs-radio"><input type="radio" name="howHandled" value="自社で対応した">自社で対応した</label>
+          <label class="hs-radio"><input type="radio" name="howHandled" value="他社に依頼した">他社に依頼した</label>
+        </div>
+      </div>
+
+      <div class="hs-sub-block" id="expSubB">
+        <div class="hs-sub-block-label">その後の状況や課題について教えてください</div>
+        <div class="hs-radio-grid">
+          <label class="hs-radio"><input type="radio" name="afterStatus" value="無事に認証取得できた">無事に認証取得できた</label>
+          <label class="hs-radio"><input type="radio" name="afterStatus" value="課題があり、取得できなかった" data-sub-toggle="afterStatusReasonWrap">課題があり、取得できなかった</label>
+          <label class="hs-radio"><input type="radio" name="afterStatus" value="情報は集めたが、内容が複雑でよく分からなかった">情報は集めたが、内容が複雑でよく分からなかった</label>
+          <label class="hs-radio"><input type="radio" name="afterStatus" value="その他" data-other-toggle="afterStatusOther">その他（ご記載ください）</label>
+        </div>
+        <div class="hs-other-input" id="afterStatusReasonWrap">
+          <textarea class="hs-textarea" id="afterStatusReason" placeholder="↳ 理由を具体的にご記載ください"></textarea>
+        </div>
+        <input type="text" class="hs-input hs-other-input" id="afterStatusOther" placeholder="その他の内容をご記入ください">
+      </div>
+    </div>
+  </div>
+
+  <!-- 🌟 今後のご希望 -->
+  <div class="hs-card">
+    <div class="hs-card-head">
+      <span class="hs-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7-5.4-4.7 7.1-.6z"/></svg></span>
+      <div class="hs-card-title">今後のご希望</div>
+    </div>
+    <div class="hs-q">
+      <div class="hs-q-label">認証取得や輸出開始を希望する時期<span class="req">*</span></div>
+      <div class="hs-q-hint">例：〇年〇月頃まで</div>
+      <input type="text" class="hs-input" id="targetTiming" placeholder="例：2026年12月頃まで">
+    </div>
+    <div class="hs-q">
+      <div class="hs-q-label">必要な支援範囲<span class="req">*</span></div>
+      <div class="hs-check-grid" id="supportGroup">
+        <label class="hs-check"><input type="checkbox" value="認証取得に関する全て">認証取得に関する全て</label>
+        <label class="hs-check"><input type="checkbox" value="成分調査">成分調査</label>
+        <label class="hs-check"><input type="checkbox" value="施設登録">施設登録</label>
+        <label class="hs-check"><input type="checkbox" value="ラベル作成・サポート">ラベル作成・サポート</label>
+        <label class="hs-check"><input type="checkbox" value="事前申告">事前申告</label>
+        <label class="hs-check"><input type="checkbox" value="認証＋輸送まで一貫サポート">認証＋輸送まで一貫サポート</label>
+        <label class="hs-check"><input type="checkbox" value="施設更新">施設更新</label>
+        <label class="hs-check"><input type="checkbox" value="米Amazon新規アカウント作成〜出荷まで">米Amazon新規アカウント作成〜出荷まで</label>
+        <label class="hs-check"><input type="checkbox" value="米Amazon商品ページ作成のみ">米Amazon商品ページ作成のみ</label>
+        <label class="hs-check"><input type="checkbox" value="米AmazonFBA向けの物流代行">米AmazonFBA向けの物流代行</label>
+        <label class="hs-check"><input type="checkbox" value="その他" data-other-toggle="supportOther">その他（ご記載ください）</label>
+      </div>
+      <input type="text" class="hs-input hs-other-input" id="supportOther" placeholder="その他の内容をご記入ください">
+    </div>
+    <div class="hs-q">
+      <div class="hs-q-label">無料相談で知りたいこと／解決したいこと／ご要望</div>
+      <div class="hs-q-hint">なんでもご記載ください</div>
+      <textarea class="hs-textarea" id="freeRequest" placeholder="ご自由にご記入ください"></textarea>
+    </div>
+  </div>
+
+  <!-- 🛫 商品情報 -->
+  <div class="hs-card">
+    <div class="hs-card-head">
+      <span class="hs-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-1 .1-1.3.5l-.7.8c-.4.5-.2 1.2.4 1.4L9 11l-3 3H3l-1 3 3-1v3l3-1 2.3-3.2 3.4 5.8c.2.6.9.8 1.4.4l.8-.7c.4-.3.6-.8.5-1.3z"/></svg></span>
+      <div class="hs-card-title">商品情報</div>
+    </div>
+    <div class="hs-q">
+      <div class="hs-q-label">FDA認証取得（アメリカ輸出）を検討している商材数<span class="req">*</span></div>
+      <div class="hs-product-count">
+        <button type="button" class="hs-count-btn" id="prodMinus">−</button>
+        <span class="hs-count-num" id="prodCountLabel">1</span>
+        <button type="button" class="hs-count-btn" id="prodPlus">＋</button>
+      </div>
+    </div>
+    <div id="productList"></div>
+  </div>
+
+  <!-- 🛍️ 販路に関して -->
+  <div class="hs-card">
+    <div class="hs-card-head">
+      <span class="hs-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span>
+      <div class="hs-card-title">販路に関して</div>
+    </div>
+    <div class="hs-q">
+      <div class="hs-q-label">現在、ご検討中の販路について</div>
+      <div class="hs-check-grid" id="channelGroup">
+        <label class="hs-check"><input type="checkbox" value="ECサイト（自社）">ECサイト（自社）</label>
+        <label class="hs-check"><input type="checkbox" value="ECサイト（Amazon）">ECサイト（Amazon）</label>
+        <label class="hs-check"><input type="checkbox" value="ECサイト（Amazon以外）">ECサイト（Amazon以外）</label>
+        <label class="hs-check"><input type="checkbox" value="米国卸売・ディストリビューター">米国卸売・ディストリビューター</label>
+        <label class="hs-check"><input type="checkbox" value="小売店・専門店">小売店・専門店</label>
+        <label class="hs-check"><input type="checkbox" value="展示会・B2B商談会">展示会・B2B商談会</label>
+        <label class="hs-check"><input type="checkbox" value="その他" data-other-toggle="channelOther">その他（ご記載ください）</label>
+      </div>
+      <input type="text" class="hs-input hs-other-input" id="channelOther" placeholder="その他の内容をご記入ください">
+    </div>
+  </div>
+
+  <div class="hs-card" style="animation-delay:.1s;">
+    <button type="submit" class="hs-submit" id="hsSubmitBtn">
+      <span class="hs-submit-icon">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>
+      </span>
+      <span class="hs-submit-label" id="hsSubmitLabel">ヒアリングシートを送信する &rarr;</span>
+    </button>
+    <div class="hs-submit-note">※ この内容は無料相談の担当者が事前に確認いたします</div>
+    <div class="hs-status" id="hsStatus"></div>
+  </div>
+
+</form>
+
+<script>
+/* =========================================================
+   設定
+   ========================================================= */
+// Google Apps Script のウェブアプリURL（booking.htmlと同じデプロイURLを設定してください）
+const ENDPOINT_URL = "https://script.google.com/macros/s/【ここにデプロイIDを貼り付け】/exec";
+
+// URLの ?id=XXXX を、どの申込みに対するヒアリングかの紐付けIDとして使用
+const params = new URLSearchParams(location.search);
+const submissionId = params.get('id') || '';
+
+// 「サービスページに戻る」— 元のページに戻す（idがある場合はトップページへ）
+document.getElementById('hsBack').setAttribute('href', 'index.html');
+
+/* =========================================================
+   その他入力欄・サブ設問の表示切替
+   ========================================================= */
+document.querySelectorAll('[data-other-toggle]').forEach(input => {
+  input.addEventListener('change', () => {
+    const target = document.getElementById(input.dataset.otherToggle);
+    if(!target) return;
+    // 同じグループ内の他の「その他」判定（チェックボックスは複数チェック可）
+    if(input.type === 'checkbox'){
+      target.classList.toggle('show', input.checked);
+    } else {
+      target.classList.toggle('show', input.checked);
+    }
+  });
+});
+
+document.querySelectorAll('[data-sub-toggle]').forEach(input => {
+  input.addEventListener('change', () => {
+    const target = document.getElementById(input.dataset.subToggle);
+    if(!target) return;
+    target.classList.toggle('show', input.checked);
+  });
+});
+
+// experience（認証取得経験）に応じてサブブロック表示
+const expInputs = document.querySelectorAll('input[name="experience"]');
+const expSubA = document.getElementById('expSubA');
+const expSubB = document.getElementById('expSubB');
+expInputs.forEach(input => {
+  input.addEventListener('change', () => {
+    const v = input.value;
+    expSubA.classList.toggle('show', v === '実際に認証取得のための業務を行ったことがある');
+    expSubB.classList.toggle('show', v === '実際に認証取得のための業務を行ったことがある' || v === '情報収集はしたことがある');
+  });
+});
+
+/* =========================================================
+   商品ブロックの動的追加・削除
+   ========================================================= */
+const MAX_PRODUCTS = 6;
+let productCount = 1;
+const productList = document.getElementById('productList');
+const countLabel = document.getElementById('prodCountLabel');
+const minusBtn = document.getElementById('prodMinus');
+const plusBtn = document.getElementById('prodPlus');
+
+function productBlockHTML(index){
+  return `
+    <div class="hs-product" data-index="${index}">
+      <div class="hs-product-title"><span class="badge">${index}</span>商材 ${index}</div>
+      <div class="hs-product-row">
+        <div class="hs-q-label">商品名<span class="req">*</span></div>
+        <input type="text" class="hs-input p-name" placeholder="商品名をご記入ください">
+      </div>
+      <div class="hs-product-row">
+        <div class="hs-q-label">商品URL<span class="req">*</span></div>
+        <input type="text" class="hs-input p-url" placeholder="https://">
+      </div>
+      <div class="hs-product-row hs-product-row-2">
+        <div>
+          <div class="hs-q-label">カテゴリ<span class="req">*</span></div>
+          <div class="hs-q-hint">例：食品、化粧品、雑貨、サプリメントなど</div>
+          <input type="text" class="hs-input p-category" placeholder="例：食品">
+        </div>
+        <div>
+          <div class="hs-q-label">用途と対象物<span class="req">*</span></div>
+          <div class="hs-q-hint">例：動物用健康サプリメント</div>
+          <input type="text" class="hs-input p-usage" placeholder="例：動物用健康サプリメント">
+        </div>
+      </div>
+      <div class="hs-product-row">
+        <div class="hs-q-label">原材料</div>
+        <div class="hs-q-hint">食品や化粧品、薬品等の場合、すべての成分をご記載ください</div>
+        <textarea class="hs-textarea p-ingredients" placeholder="成分をすべてご記入ください"></textarea>
+      </div>
+      <div class="hs-product-row hs-product-row-2">
+        <div>
+          <div class="hs-q-label">1商品あたりの包装仕様<span class="req">*</span></div>
+          <div class="hs-q-hint">例：サイズ・重量など</div>
+          <input type="text" class="hs-input p-packaging" placeholder="例：10cm×5cm、100g">
+        </div>
+        <div>
+          <div class="hs-q-label">賞味期限・消費期限<span class="req">*</span></div>
+          <div class="hs-q-hint">例：製造より1年</div>
+          <input type="text" class="hs-input p-expiry" placeholder="例：製造より1年">
+        </div>
+      </div>
+      <div class="hs-product-row">
+        <div class="hs-q-label">製造施設名<span class="req">*</span></div>
+        <div class="hs-q-hint">※製造・加工・包装・保管のいずれかを担っているすべての施設をご記載ください</div>
+        <input type="text" class="hs-input p-facility" placeholder="施設名をご記入ください">
+      </div>
+      <div class="hs-product-row">
+        <div class="hs-q-label">温度管理の必要性の有無<span class="req">*</span></div>
+        <div class="hs-q-hint">例：10℃以下の冷蔵保管が必要</div>
+        <input type="text" class="hs-input p-temperature" placeholder="例：常温保管可 / 10℃以下の冷蔵保管が必要">
+      </div>
+    </div>
+  `;
+}
+
+function renderProducts(){
+  productList.innerHTML = '';
+  for(let i = 1; i <= productCount; i++){
+    productList.insertAdjacentHTML('beforeend', productBlockHTML(i));
+  }
+  countLabel.textContent = productCount;
+  minusBtn.disabled = productCount <= 1;
+  plusBtn.disabled = productCount >= MAX_PRODUCTS;
+}
+renderProducts();
+
+minusBtn.addEventListener('click', () => {
+  if(productCount > 1){ productCount--; renderProducts(); }
+});
+plusBtn.addEventListener('click', () => {
+  if(productCount < MAX_PRODUCTS){ productCount++; renderProducts(); }
+});
+
+/* =========================================================
+   送信
+   ========================================================= */
+const form = document.getElementById('hearingForm');
+const submitBtn = document.getElementById('hsSubmitBtn');
+const submitLabel = document.getElementById('hsSubmitLabel');
+const statusBox = document.getElementById('hsStatus');
+
+function getCheckedValues(groupId){
+  return Array.from(document.querySelectorAll(`#${groupId} input:checked`)).map(i => i.value);
+}
+function getRadioValue(name){
+  const el = document.querySelector(`input[name="${name}"]:checked`);
+  return el ? el.value : '';
+}
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  statusBox.className = 'hs-status';
+  statusBox.textContent = '';
+
+  // 商品情報を配列で収集
+  const products = Array.from(document.querySelectorAll('.hs-product')).map(block => ({
+    name: block.querySelector('.p-name').value.trim(),
+    url: block.querySelector('.p-url').value.trim(),
+    category: block.querySelector('.p-category').value.trim(),
+    usage: block.querySelector('.p-usage').value.trim(),
+    ingredients: block.querySelector('.p-ingredients').value.trim(),
+    packaging: block.querySelector('.p-packaging').value.trim(),
+    expiry: block.querySelector('.p-expiry').value.trim(),
+    facility: block.querySelector('.p-facility').value.trim(),
+    temperature: block.querySelector('.p-temperature').value.trim()
+  }));
+
+  const payload = {
+    formType: 'hearing',
+    submissionId: submissionId,
+    concerns: getCheckedValues('concernGroup'),
+    concernOther: document.getElementById('concernOther').value.trim(),
+    experience: getRadioValue('experience'),
+    howHandled: getRadioValue('howHandled'),
+    afterStatus: getRadioValue('afterStatus'),
+    afterStatusReason: document.getElementById('afterStatusReason').value.trim(),
+    afterStatusOther: document.getElementById('afterStatusOther').value.trim(),
+    targetTiming: document.getElementById('targetTiming').value.trim(),
+    support: getCheckedValues('supportGroup'),
+    supportOther: document.getElementById('supportOther').value.trim(),
+    freeRequest: document.getElementById('freeRequest').value.trim(),
+    productCount: productCount,
+    products: products,
+    channels: getCheckedValues('channelGroup'),
+    channelOther: document.getElementById('channelOther').value.trim(),
+    page: location.href,
+    submittedAt: new Date().toISOString()
+  };
+
+  submitBtn.disabled = true;
+  submitLabel.innerHTML = '<span class="spinner"></span>送信中…';
+
+  try {
+    await fetch(ENDPOINT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    });
+
+    statusBox.className = 'hs-status ok';
+    statusBox.textContent = 'ヒアリングシートを受け付けました。無料相談当日、こちらの内容をもとにお話しさせていただきます。';
+    submitLabel.textContent = 'ヒアリングシートを送信する →';
+    form.querySelectorAll('input,textarea').forEach(el => el.disabled = true);
+    submitBtn.disabled = true;
+  } catch(err){
+    statusBox.className = 'hs-status err';
+    statusBox.textContent = '送信に失敗しました。お手数ですが時間をおいて再度お試しください。';
+    submitLabel.textContent = 'ヒアリングシートを送信する →';
+    submitBtn.disabled = false;
+  }
+});
+</script>
+</body>
+</html>
