@@ -484,12 +484,94 @@ plusBtn.addEventListener('click', () => {
 });
 
 /* =========================================================
+   過去の回答の読み込み（同じリンクを再度開いた場合の復元）
+   ========================================================= */
+function setCheckedValues(groupId, values){
+  if(!Array.isArray(values)) return;
+  document.querySelectorAll(`#${groupId} input`).forEach(input => {
+    if(values.includes(input.value)){
+      input.checked = true;
+      input.dispatchEvent(new Event('change'));
+    }
+  });
+}
+function setRadioValue(name, value){
+  if(!value) return;
+  const el = document.querySelector(`input[name="${name}"][value="${CSS.escape(value)}"]`);
+  if(el){
+    el.checked = true;
+    el.dispatchEvent(new Event('change'));
+  }
+}
+function setOtherInput(inputId, value){
+  if(!value) return;
+  const el = document.getElementById(inputId);
+  if(el){
+    el.value = value;
+    el.classList.add('show');
+  }
+}
+
+function populateForm(data){
+  setCheckedValues('concernGroup', data.concerns);
+  setOtherInput('concernOther', data.concernOther);
+
+  setRadioValue('experience', data.experience);
+  setRadioValue('howHandled', data.howHandled);
+  setRadioValue('afterStatus', data.afterStatus);
+  if(data.afterStatusReason){
+    document.getElementById('afterStatusReason').value = data.afterStatusReason;
+    document.getElementById('afterStatusReasonWrap').classList.add('show');
+  }
+  setOtherInput('afterStatusOther', data.afterStatusOther);
+
+  if(data.targetTiming) document.getElementById('targetTiming').value = data.targetTiming;
+  setCheckedValues('supportGroup', data.support);
+  setOtherInput('supportOther', data.supportOther);
+  if(data.freeRequest) document.getElementById('freeRequest').value = data.freeRequest;
+
+  if(Array.isArray(data.products) && data.products.length > 0){
+    productCount = Math.min(data.products.length, MAX_PRODUCTS);
+    renderProducts();
+    document.querySelectorAll('.hs-product').forEach((block, i) => {
+      const p = data.products[i];
+      if(!p) return;
+      block.querySelector('.p-name').value = p.name || '';
+      block.querySelector('.p-url').value = p.url || '';
+      block.querySelector('.p-category').value = p.category || '';
+      block.querySelector('.p-usage').value = p.usage || '';
+      block.querySelector('.p-ingredients').value = p.ingredients || '';
+      block.querySelector('.p-packaging').value = p.packaging || '';
+      block.querySelector('.p-expiry').value = p.expiry || '';
+      block.querySelector('.p-facility').value = p.facility || '';
+      block.querySelector('.p-temperature').value = p.temperature || '';
+    });
+  }
+
+  setCheckedValues('channelGroup', data.channels);
+  setOtherInput('channelOther', data.channelOther);
+}
+
+/* =========================================================
    送信
    ========================================================= */
 const form = document.getElementById('hearingForm');
 const submitBtn = document.getElementById('hsSubmitBtn');
 const submitLabel = document.getElementById('hsSubmitLabel');
 const statusBox = document.getElementById('hsStatus');
+
+if(submissionId){
+  fetch(ENDPOINT_URL + '?id=' + encodeURIComponent(submissionId))
+    .then(res => res.json())
+    .then(res => {
+      if(res && res.result === 'success' && res.data){
+        populateForm(res.data);
+        statusBox.className = 'hs-status ok';
+        statusBox.textContent = '前回の回答を読み込みました。内容を確認・修正して送信すると上書きされます。';
+      }
+    })
+    .catch(() => { /* 初回アクセス時など、まだ回答が無い場合は何もしない */ });
+}
 
 function getCheckedValues(groupId){
   return Array.from(document.querySelectorAll(`#${groupId} input:checked`)).map(i => i.value);
