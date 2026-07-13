@@ -551,10 +551,9 @@ form.addEventListener('submit', async (e) => {
     });
 
     statusBox.className = 'hs-status ok';
-    statusBox.textContent = 'ヒアリングシートを受け付けました。無料相談当日、こちらの内容をもとにお話しさせていただきます。';
+    statusBox.textContent = 'ヒアリングシートを受け付けました。内容を修正して再度送信すると、上書きで更新されます。';
     submitLabel.textContent = 'ヒアリングシートを送信する →';
-    form.querySelectorAll('input,textarea').forEach(el => el.disabled = true);
-    submitBtn.disabled = true;
+    submitBtn.disabled = false;
   } catch(err){
     statusBox.className = 'hs-status err';
     statusBox.textContent = '送信に失敗しました。お手数ですが時間をおいて再度お試しください。';
