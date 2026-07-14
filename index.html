@@ -254,14 +254,16 @@ img{max-width:100%;display:block}
 /* 左→右にフェードする薄ブルーオーバーレイ */
 .hero-collage-overlay{
   position:absolute;inset:0;z-index:1;
-  background:linear-gradient(90deg,
-    rgba(236,246,255,0.97) 0%,
-    rgba(225,240,255,0.9) 24%,
-    rgba(210,232,255,0.72) 42%,
-    rgba(195,224,255,0.46) 58%,
-    rgba(190,220,255,0.2) 68%,
-    transparent 76%
-  );
+  background:
+    radial-gradient(ellipse 55% 42% at 58% 14%, rgba(225,240,255,.78), transparent 75%),
+    linear-gradient(90deg,
+      rgba(236,246,255,0.97) 0%,
+      rgba(225,240,255,0.9) 24%,
+      rgba(210,232,255,0.72) 42%,
+      rgba(195,224,255,0.46) 58%,
+      rgba(190,220,255,0.2) 68%,
+      transparent 76%
+    );
 }
 .hero-collage-grid{display:none;}
 
