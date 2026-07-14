@@ -2426,16 +2426,25 @@ function switchTab(index) {
               <th class="adv-th-item">項目</th>
               <th class="adv-th-lite">
                 <div class="adv-plan-name">ライト</div>
-                <div class="adv-plan-note">最低限の安心を確保したい、施設登録を行わない化粧品企業様</div>
+                <div class="adv-plan-recommend">
+                  <div class="adv-plan-recommend-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>こんな企業様へ</div>
+                  <div class="adv-plan-note">最低限の安心を確保したい、施設登録を行わない化粧品企業様</div>
+                </div>
               </th>
               <th class="adv-th-std">
                 <div class="adv-plan-badge">一番人気</div>
                 <div class="adv-plan-name">スタンダード</div>
-                <div class="adv-plan-note">最低限の安全性に加え、ビジネス運営を支える項目も網羅したい企業様</div>
+                <div class="adv-plan-recommend">
+                  <div class="adv-plan-recommend-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>こんな企業様へ</div>
+                  <div class="adv-plan-note">最低限の安全性に加え、ビジネス運営を支える項目も網羅したい企業様</div>
+                </div>
               </th>
               <th class="adv-th-pre">
                 <div class="adv-plan-name">プレミアム</div>
-                <div class="adv-plan-note">安心とビジネスの両面を万全に確保し、FDA対応および海外ビジネス全般において盤石な体制を整えたい企業様</div>
+                <div class="adv-plan-recommend">
+                  <div class="adv-plan-recommend-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>こんな企業様へ</div>
+                  <div class="adv-plan-note">安心とビジネスの両面を万全に確保し、FDA対応および海外ビジネス全般において盤石な体制を整えたい企業様</div>
+                </div>
               </th>
             </tr>
           </thead>
@@ -2582,7 +2591,32 @@ function switchTab(index) {
 .adv-th-std{background:rgba(247,221,125,.15);}
 .adv-th-pre{}
 .adv-plan-name{font-size:14px;font-weight:700;margin-bottom:4px;}
-.adv-plan-note{font-size:12px;color:rgba(255,255,255,.65);line-height:1.7;margin-top:4px;}
+.adv-plan-recommend{
+  margin-top:10px;padding:10px 10px 11px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:9px;
+  cursor:default;
+  transition:background .2s,border-color .2s;
+}
+.adv-plan-recommend:hover{
+  background:rgba(255,255,255,.14);
+  border-color:rgba(247,221,125,.35);
+}
+.adv-plan-recommend-label{
+  display:flex;align-items:center;justify-content:center;gap:5px;
+  font-size:10.5px;font-weight:700;letter-spacing:.03em;color:#F7DD7D;
+}
+.adv-plan-recommend-label svg{width:11px;height:11px;flex-shrink:0;}
+.adv-plan-note{
+  font-size:12px;color:rgba(255,255,255,.85);line-height:1.6;
+  max-height:0;opacity:0;overflow:hidden;
+  transition:max-height .3s ease,opacity .3s ease,margin-top .3s ease;
+  margin-top:0;
+}
+.adv-plan-recommend:hover .adv-plan-note{
+  max-height:120px;opacity:1;margin-top:8px;
+}
 .adv-plan-badge{
   display:inline-block;background:#F7DD7D;color:var(--navy);
   font-size:11px;font-weight:700;padding:2px 10px;border-radius:20px;
