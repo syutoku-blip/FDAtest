@@ -255,7 +255,7 @@ img{max-width:100%;display:block}
 .hero-collage-overlay{
   position:absolute;inset:0;z-index:1;
   background:
-    radial-gradient(ellipse 55% 42% at 58% 14%, rgba(225,240,255,.78), transparent 75%),
+    radial-gradient(ellipse 62% 50% at 58% 12%, rgba(225,240,255,.94), transparent 78%),
     linear-gradient(90deg,
       rgba(236,246,255,0.97) 0%,
       rgba(225,240,255,0.9) 24%,
@@ -289,15 +289,15 @@ img{max-width:100%;display:block}
 h1.hero-h{
   font-family:'Cormorant Garamond',serif;
   font-weight:300;line-height:1.1;letter-spacing:-.01em;
-  margin-top:-12px;
-  margin-bottom:4px;
+  margin-top:20px;
+  margin-bottom:28px;
   text-align:center;
   width:100%;
   align-self:stretch;
 }
 .hero-logo-img{
   display:block;
-  width:clamp(460px,42vw,900px);
+  width:clamp(490px,45vw,950px);
   max-width:none;
   height:auto;
   margin:0 auto;
@@ -352,7 +352,7 @@ h1.hero-h{animation:heroFadeUp .9s ease both;animation-delay:.1s}
 
 /* キャッチフレーズ */
 .catch-row{
-  display:flex;flex-direction:column;gap:0;margin-top:-16px;margin-bottom:36px;margin-left:46px;
+  display:flex;flex-direction:column;gap:0;margin-top:4px;margin-bottom:48px;margin-left:46px;
 }
 .catch-area{
   position:relative;width:100%;padding:0;
@@ -378,7 +378,7 @@ h1.hero-h{animation:heroFadeUp .9s ease both;animation-delay:.1s}
   width:fit-content;
   margin-top:18px;
   margin-left:40px;
-  margin-bottom:28px;
+  margin-bottom:48px;
 }
 .hero-cta-tagline-in{
   font-family:'Cormorant Garamond',serif;
@@ -504,7 +504,7 @@ h1.hero-h{animation:heroFadeUp .9s ease both;animation-delay:.1s}
 }
 .hero-left .catch-text{
   color:var(--navy);
-  font-size:clamp(26px,3.2vw,42px);
+  font-size:clamp(20px,2.6vw,34px);
   font-weight:400;
   text-align:left;
 }
@@ -874,7 +874,7 @@ h1.hero-h{animation:heroFadeUp .9s ease both;animation-delay:.1s}
   box-shadow:0 0 0 5px var(--white);
 }
 .ch.dark .flow-dot{box-shadow:0 0 0 5px var(--navy);background:var(--amber);color:var(--navy)}
-.ch.dark .flow-title{color:#fff}
+.ch.dark .flow-title{color:#F7DD7D}
 .ch.dark .flow-desc{color:rgba(255,255,255,.5)}
 .ch.dark .flow-wrap::before{background:linear-gradient(to bottom,var(--amber),rgba(247,221,125,.15))}
 .ch.dark .flow-tag{background:rgba(247,221,125,.15);color:#F7DD7D}
@@ -1012,8 +1012,12 @@ h1.hero-h{animation:heroFadeUp .9s ease both;animation-delay:.1s}
   max-width:760px;margin:0 auto 56px;
 }
 .cta-heading em{font-style:italic;color:#406AAF}
+.cta-heading-sub{
+  font-size:15px;color:#3a5348;line-height:1.95;font-weight:300;
+  text-align:center;max-width:640px;margin:-32px auto 48px;
+}
 .cta-columns{
-  display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:start;
+  display:grid;grid-template-columns:1fr 540px;gap:64px;align-items:start;
 }
 #ch-cta .ch-label{color:#5a8577;}
 .cta-left-sub{font-size:16px;color:#3a5348;line-height:1.95;font-weight:300;margin-bottom:36px}
@@ -1662,16 +1666,25 @@ footer{
 
         <div class="strength-list-grid">
           <div class="strength-list-item strength-item-1">
-            <span class="strength-list-num">01</span>
-            <p>「商品を米国へ送れる状態にすること」</p>
+            <div class="strength-list-photo"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=70&fit=crop" alt=""></div>
+            <div class="strength-list-body">
+              <span class="strength-list-num">01</span>
+              <p>「商品を米国へ送れる状態にすること」</p>
+            </div>
           </div>
           <div class="strength-list-item strength-item-2">
-            <span class="strength-list-num">02</span>
-            <p>「通関・販売時のリスクを減らすこと」</p>
+            <div class="strength-list-photo"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&q=70&fit=crop" alt=""></div>
+            <div class="strength-list-body">
+              <span class="strength-list-num">02</span>
+              <p>「通関・販売時のリスクを減らすこと」</p>
+            </div>
           </div>
           <div class="strength-list-item strength-item-3">
-            <span class="strength-list-num">03</span>
-            <p>「実際の販売につなげること」</p>
+            <div class="strength-list-photo"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=70&fit=crop" alt=""></div>
+            <div class="strength-list-body">
+              <span class="strength-list-num">03</span>
+              <p>「実際の販売につなげること」</p>
+            </div>
           </div>
         </div>
 
@@ -1770,18 +1783,17 @@ footer{
   font-size:14px;color:#4a6080;font-weight:300;margin-bottom:20px;
 }
 
-/* ─── 3つの視点（強調ブロック） ─── */
+/* ─── 3つの視点（画像メイン、文字はキャプション） ─── */
 .strength-list-grid{
   display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
   margin:24px 0 22px;
 }
 .strength-list-item{
   position:relative;
-  background:linear-gradient(160deg,#eef4fc 0%,#e3edfa 100%);
-  border:1px solid #c7ddf5;
-  border-top:3px solid #427AB5;
-  border-radius:10px;
-  padding:22px 18px 20px;
+  background:#fff;
+  border:1px solid #e3edfa;
+  border-radius:12px;
+  overflow:hidden;
   box-shadow:0 4px 14px rgba(66,122,181,.1);
   transition:transform .2s,box-shadow .2s;
 }
@@ -1789,27 +1801,19 @@ footer{
   transform:translateY(-3px);
   box-shadow:0 10px 24px rgba(66,122,181,.18);
 }
-.strength-list-icon{
-  display:flex;align-items:center;justify-content:center;
-  width:36px;height:36px;border-radius:9px;
-  margin-bottom:12px;
-  background:rgba(255,255,255,.7);
+.strength-list-photo{
+  width:100%;height:110px;overflow:hidden;
 }
-.strength-list-icon svg{width:18px;height:18px;}
-.strength-item-1{border-top-color:#406AAF;}
-.strength-item-1 .strength-list-icon{color:#406AAF;}
-.strength-item-2{border-top-color:#406AAF;}
-.strength-item-2 .strength-list-icon{color:#406AAF;}
-.strength-item-3{border-top-color:#406AAF;}
-.strength-item-3 .strength-list-icon{color:#406AAF;}
+.strength-list-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.strength-list-body{padding:14px 16px 16px;}
 .strength-list-num{
   display:block;
   font-family:'Cormorant Garamond',serif;
-  font-size:34px;font-weight:400;color:#427AB5;line-height:1;
-  margin-bottom:12px;
+  font-size:22px;font-weight:400;color:#8aa8cc;line-height:1;
+  margin-bottom:6px;
 }
 .strength-list-item p{
-  margin:0;font-size:14px;font-weight:700;color:#1c3c66;line-height:1.6;
+  margin:0;font-size:12.5px;font-weight:500;color:#5a7398;line-height:1.55;
 }
 
 .strength-caption{
@@ -1834,7 +1838,7 @@ footer{
 }
 .strength-card-icon svg{width:100%;height:100%;}
 .strength-card-title{font-size:14px;font-weight:700;color:#406AAF;margin-bottom:4px;}
-.strength-card-desc{font-size:13px;color:var(--ink2);line-height:1.7;}
+.strength-card-desc{font-size:14px;color:#4a6080;line-height:1.85;font-weight:300;}
 
 .strength-bottom{
   position:relative;
@@ -1913,14 +1917,14 @@ footer{
     <!-- タブ0：これから -->
     <div class="pain-panel active" id="pain-panel-0">
       <div class="pain-grid-img">
-        <img src="Qforfirst.png" alt="これからFDA対応を始める企業様のお悩み">
+        <img src="Qforfirst.svg" alt="これからFDA対応を始める企業様のお悩み">
       </div>
       <div class="pain-answer reveal">
         <div class="pain-answer-left">
           <div class="pain-answer-left-text">初めての海外展開でも、<br><em>一歩ずつ確実に。</em></div>
         </div>
         <div class="pain-answer-right">
-          <div class="pain-answer-title" style="font-size:15px;color:var(--ink2);font-style:normal;line-height:1.9;margin-bottom:20px;">ワールドシフトでは、FDA対応に必要な確認事項や手続きを整理し、<br>施設登録やラベル作成などの実務を一貫してサポートします。<br>お客様には、商品情報や成分情報をご共有いただくだけ。<br>何から始めればよいか分からない段階から、<br>輸出開始後の更新対応や規制変更まで継続して対応いたします。</div>
+          <div class="pain-answer-title" style="font-size:15px;color:var(--ink2);font-style:normal;line-height:1.9;margin-bottom:20px;">ワールドシフトでは、FDA対応に必要な確認事項や<span style="white-space:nowrap;">手続きを整理し、</span><br>施設登録やラベル作成などの実務を一貫してサポートします。<br>お客様には、商品情報や成分情報をご共有いただくだけ。<br>何から始めればよいか分からない段階から、<br>輸出開始後の更新対応や規制変更まで継続して対応いたします。</div>
           <div class="cta-tile-wide" style="margin:32px 0 0;">
           <a href="booking.html" class="cta-tile-wide-inner compact">
             <span class="cta-tile-wide-dots"></span>
@@ -1944,7 +1948,7 @@ footer{
     <!-- タブ1：すでに対応済み -->
     <div class="pain-panel" id="pain-panel-1">
       <div class="pain-grid-img">
-        <img src="Qfordone.png" alt="すでにFDA対応済みの企業様のお悩み">
+        <img src="Qfordone.svg" alt="すでにFDA対応済みの企業様のお悩み">
       </div>
       <div class="pain-answer reveal">
         <div class="pain-answer-left" style="background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=85&fit=crop') !important;background-size:cover !important;background-position:center !important;">
@@ -2845,7 +2849,6 @@ function switchTab(index) {
       <div class="faq-left-content reveal d2">
         <div class="ch-label reveal">FAQ</div>
         <div class="display reveal d1" style="margin-bottom:16px">よくある<br><em>ご質問</em></div>
-        <div class="rule reveal d2"></div>
       </div>
 
       <div class="faq-list reveal d1">
@@ -2889,16 +2892,16 @@ function switchTab(index) {
   <div class="cta-photo-overlay"></div>
   <div class="cta-inner">
     <div class="cta-heading reveal">
-      まず、<em>無料で</em>ご相談ください。<br>
-      御社に合わせてご案内します。
+      FDA対応に関する疑問を、<br><em>無料相談</em>で整理しませんか。
     </div>
+    <p class="cta-heading-sub reveal">
+      商品や輸出方法によって、必要な対応や手続きは異なります。<br>
+      「FDA対応が必要か分からない」「費用や期間を知りたい」といった段階でも問題ありません。<br>
+      御社の状況を確認し、必要なFDA対応、費用の目安、<br>今後のスケジュールを分かりやすくご案内します。
+    </p>
 
     <div class="cta-columns">
     <div class="cta-left reveal">
-      <p class="cta-left-sub">
-        FDA対応の要否・費用感・スケジュールを無料でご確認いただけます。<br>
-        お問い合わせから通常2営業日以内にご返信します。
-      </p>
       <div class="cta-info-block">
         <div class="cib">
           <span class="cib-icon">🏢</span>
@@ -2947,6 +2950,9 @@ function switchTab(index) {
           <div class="selected-summary" id="ctacSelectedSummary"></div>
 
           <button type="button" class="f-submit" id="ctacNextBtn" style="margin-top:18px;">お客様情報の入力へ進む →</button>
+          <div class="ctac-skip-link-wrap">
+            <button type="button" class="ctac-skip-link" id="ctacSkipCalBtn">まずはメールで確認したい方はこちら →</button>
+          </div>
         </div>
 
         <!-- STEP 2: お客様情報 -->
@@ -3050,7 +3056,7 @@ function switchTab(index) {
   transition:transform .5s cubic-bezier(.4,0,.2,1);
 }
 .ctac-slider.step2{transform:translateX(-50%);}
-.ctac-step{width:50%;flex-shrink:0;box-sizing:border-box;padding:40px 36px;}
+.ctac-step{width:50%;flex-shrink:0;box-sizing:border-box;padding:44px 42px;}
 .ctac-stepnum{
   width:24px;height:24px;border-radius:50%;flex-shrink:0;
   background:linear-gradient(135deg,#4a7bc4,#2f5590);color:#fff;
@@ -3064,22 +3070,30 @@ function switchTab(index) {
   transition:color .2s;
 }
 .ctac-back:hover{color:#406AAF;}
+.ctac-skip-link-wrap{text-align:center;margin-top:14px;}
+.ctac-skip-link{
+  background:none;border:none;cursor:pointer;padding:4px;
+  font-size:13px;color:var(--ink3);font-weight:500;
+  border-bottom:1px dashed var(--border2);
+  transition:color .2s,border-color .2s;
+}
+.ctac-skip-link:hover{color:#406AAF;border-color:#406AAF;}
 
 /* カレンダー（booking.htmlと共通仕様） */
-.cal-nav{display:flex;align-items:center;justify-content:space-between;margin:20px 0 16px;}
-.cal-month{font-family:'Cormorant Garamond',serif;font-size:20px;color:#1c3c66;font-weight:500;}
+.cal-nav{display:flex;align-items:center;justify-content:space-between;margin:22px 0 18px;}
+.cal-month{font-family:'Cormorant Garamond',serif;font-size:26px;color:#1c3c66;font-weight:500;}
 .cal-btn{
-  width:30px;height:30px;border-radius:50%;border:1px solid var(--border2);background:#fff;
+  width:36px;height:36px;border-radius:50%;border:1px solid var(--border2);background:#fff;
   display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink2);
-  transition:all .2s;font-size:14px;
+  transition:all .2s;font-size:16px;
 }
 .cal-btn:hover{background:var(--blue2);border-color:var(--navy3);color:#406AAF;}
 .cal-btn:disabled{opacity:.3;cursor:not-allowed;}
-.cal-weekdays{display:grid;grid-template-columns:repeat(7,1fr);text-align:center;font-size:11.5px;color:var(--ink3);font-weight:600;margin-bottom:6px;}
-.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;}
+.cal-weekdays{display:grid;grid-template-columns:repeat(7,1fr);text-align:center;font-size:13px;color:var(--ink3);font-weight:600;margin-bottom:8px;}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;}
 .cal-cell{
   aspect-ratio:1;display:flex;align-items:center;justify-content:center;
-  border-radius:9px;font-size:13px;color:var(--ink);cursor:default;position:relative;
+  border-radius:10px;font-size:16px;color:var(--ink);cursor:default;position:relative;
 }
 .cal-cell.empty{visibility:hidden;}
 .cal-cell.past{color:var(--ink3);opacity:.4;}
@@ -3212,6 +3226,8 @@ function switchTab(index) {
 
   renderCal(); renderSlots();
 
+  let skipCalendar = false;
+
   /* ステップ切替 */
   if(nextStepBtn) nextStepBtn.addEventListener('click', () => {
     if(!selDate || !selTime){
@@ -3219,9 +3235,19 @@ function switchTab(index) {
       summary.innerHTML = '<b style="color:#DC2626;">カレンダーから希望日時を選択してください</b>';
       return;
     }
+    skipCalendar = false;
     slider.classList.add('step2');
   });
   if(backBtn) backBtn.addEventListener('click', () => { slider.classList.remove('step2'); });
+
+  /* 「まずはメールで確認したい方はこちら」— 日時選択を省略してフォームへ */
+  const skipCalBtn = document.getElementById('ctacSkipCalBtn');
+  if(skipCalBtn) skipCalBtn.addEventListener('click', () => {
+    skipCalendar = true;
+    summary2.innerHTML = 'ご希望日時：<b>指定なし（メールでの確認を希望）</b>';
+    summary2.classList.add('show');
+    slider.classList.add('step2');
+  });
 
   /* 製品カテゴリ「その他」入力欄 */
   const catSel = document.getElementById('ctacCategory');
@@ -3246,10 +3272,10 @@ function switchTab(index) {
     if(category === 'その他' && catOther.value.trim()) category = catOther.value.trim();
     const message = document.getElementById('ctacMessage').value.trim();
 
-    if(!selDate || !selTime){ statusBox.className='f-status err'; statusBox.textContent='日時が選択されていません。日時選択に戻ってください。'; return; }
+    if(!skipCalendar && (!selDate || !selTime)){ statusBox.className='f-status err'; statusBox.textContent='日時が選択されていません。日時選択に戻ってください。'; return; }
     if(!company || !name || !email){ statusBox.className='f-status err'; statusBox.textContent='会社名・お名前・メールアドレスは必須です。'; return; }
 
-    const payload = { date:selDate, time:selTime, company, name, email, phone, prefecture, category, message, page:location.href, submittedAt:new Date().toISOString() };
+    const payload = { date:(skipCalendar ? '' : selDate), time:(skipCalendar ? '' : selTime), company, name, email, phone, prefecture, category, message, page:location.href, submittedAt:new Date().toISOString() };
 
     submitBtn.disabled = true;
     const origLabel = submitBtn.textContent;
