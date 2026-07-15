@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FDA Compliance Partner | WorldShift</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Noto+Sans+JP:wght@300;400;500;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@500;600;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;font-size:17.5px}
@@ -295,12 +295,35 @@ h1.hero-h{
   width:100%;
   align-self:stretch;
 }
-.hero-logo-img{
-  display:block;
-  width:clamp(490px,45vw,950px);
-  max-width:none;
-  height:auto;
-  margin:0 auto;
+.hero-h-fda{
+  display:inline-block;
+  font-family:'Cormorant Garamond',serif;
+  font-weight:700;font-style:normal;
+  font-size:clamp(64px,7.5vw,132px);
+  color:#12294f;
+  letter-spacing:-.01em;
+  margin-right:.06em;
+}
+.hero-h-cp{
+  display:inline-block;
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;font-style:normal;
+  font-size:clamp(30px,3.6vw,60px);
+  color:#2f5590;
+  letter-spacing:-.005em;
+}
+.hero-h-jp{
+  display:flex;align-items:center;justify-content:center;gap:18px;
+  font-family:'Noto Serif JP','Cormorant Garamond',serif;
+  font-weight:600;
+  font-size:clamp(18px,2vw,30px);
+  color:#12294f;
+  letter-spacing:.04em;
+  margin-top:6px;
+}
+.hero-h-line{
+  display:inline-block;width:60px;height:9px;flex-shrink:0;
+  background-image:repeating-linear-gradient(to bottom, #12294f 0, #12294f 1.5px, transparent 1.5px, transparent 4px);
 }
 @keyframes heroFadeUp{
   from{opacity:0;transform:translateY(24px)}
@@ -1129,7 +1152,10 @@ footer{
   .approach-bg-deco,.approach-bg-deco2{display:none}
   .hero-inner{padding:100px 24px 100px}
   .hero-h-main{font-size:clamp(40px,11vw,66px)}
-  .hero-logo-img{width:100%;max-width:380px;margin-left:0;}
+  .hero-h-fda{font-size:15vw;}
+  .hero-h-cp{display:block;margin-top:2px;}
+  .hero-h-jp{font-size:14px;gap:10px;}
+  .hero-h-line{width:32px;}
   .hero-h-sub{font-size:14.5px}
   .hero-tags{gap:0;margin-top:36px}
   .hero-tag{padding:0 10px;font-size:12px}
@@ -1321,7 +1347,8 @@ footer{
 
   <div class="hero-inner">
     <h1 class="hero-h">
-      <img src="FDALOGO.png" alt="FDA Compliance Partner | 米国食品・化粧品輸出の専門家" class="hero-logo-img">
+      <span class="hero-h-fda">FDA</span><span class="hero-h-cp">Compliance Partner</span>
+      <span class="hero-h-jp"><span class="hero-h-line"></span>米国食品・化粧品輸出の専門家<span class="hero-h-line"></span></span>
     </h1>
     <!-- 左：テキスト -->
     <div class="hero-left">
