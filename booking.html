@@ -241,15 +241,6 @@ img{max-width:100%;display:block}
   max-height:88vh;overflow-y:auto;
 }
 .bk-modal-overlay.show .bk-modal{transform:translateY(0) scale(1);}
-.bk-modal-close{
-  position:absolute;top:16px;right:16px;
-  width:32px;height:32px;border-radius:50%;
-  background:var(--light);border:none;color:var(--ink3);
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;transition:background .2s,color .2s;
-}
-.bk-modal-close:hover{background:var(--border);color:var(--ink);}
-.bk-modal-close svg{width:16px;height:16px;}
 .bk-modal-icon{
   width:60px;height:60px;border-radius:50%;margin:0 auto 20px;
   background:var(--greenl);color:var(--green);
@@ -290,7 +281,7 @@ img{max-width:100%;display:block}
     <h1 class="bk-title">無料相談の<em>ご予約</em></h1>
     <p class="bk-sub">
       FDA対応に関するご相談を無料で承っています。<br>
-      FDA対応が必要か分からない方から、すでに輸出・販売を進めている方まで、現在の状況に合わせてご相談いただけます。<br>
+      FDA対応が必要か分からない方から、すでに輸出・販売を進めている方まで、<span style="white-space:nowrap;">現在の状況に合わせてご相談いただけます。</span><br>
       カレンダーからご都合の良い日時を選択し、必要事項をご入力ください。<br>
       ご予約後、入力いただいたメールアドレス宛に確認メールをお送りします。
     </p>
@@ -797,26 +788,11 @@ form.addEventListener('submit', async (e) => {
     submitBtn.disabled = false;
   }
 });
-
-/* 予約完了モーダル */
-(function(){
-  const overlay = document.getElementById('bkModalOverlay');
-  const closeBtn = document.getElementById('bkModalClose');
-  const okBtn = document.getElementById('bkModalOk');
-  function closeModal(){ overlay.classList.remove('show'); }
-  if(closeBtn) closeBtn.addEventListener('click', closeModal);
-  if(okBtn) okBtn.addEventListener('click', closeModal);
-  if(overlay) overlay.addEventListener('click', (e) => { if(e.target === overlay) closeModal(); });
-  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
-})();
 </script>
 
 <!-- 予約完了モーダル -->
 <div class="bk-modal-overlay" id="bkModalOverlay">
   <div class="bk-modal">
-    <button type="button" class="bk-modal-close" id="bkModalClose" aria-label="閉じる">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="M6 6l12 12"/></svg>
-    </button>
     <div class="bk-modal-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
     </div>
@@ -835,6 +811,18 @@ form.addEventListener('submit', async (e) => {
     <button type="button" class="bk-modal-ok" id="bkModalOk">閉じる</button>
   </div>
 </div>
+
+<script>
+/* 予約完了モーダル */
+(function(){
+  const overlay = document.getElementById('bkModalOverlay');
+  const okBtn = document.getElementById('bkModalOk');
+  function closeModal(){ overlay.classList.remove('show'); }
+  if(okBtn) okBtn.addEventListener('click', closeModal);
+  if(overlay) overlay.addEventListener('click', (e) => { if(e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+})();
+</script>
 
 </body>
 </html>
