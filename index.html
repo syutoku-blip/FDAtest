@@ -271,7 +271,7 @@ img{max-width:100%;display:block}
 .hero-inner{
   position:relative;z-index:3;
   display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
-  min-height:86vh;
+  min-height:92vh;
   padding:0;
   text-align:left;
 }
@@ -298,33 +298,46 @@ h1.hero-h{
 .hero-h-fda{
   display:inline-block;
   font-family:'Cormorant Garamond',serif;
-  font-weight:700;font-style:normal;
+  font-weight:600;font-style:normal;
   font-size:clamp(64px,7.5vw,132px);
-  color:#12294f;
-  letter-spacing:-.01em;
-  margin-right:.06em;
+  background:linear-gradient(155deg,#12294f 0%,#2f5590 60%,#4a7bc4 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  letter-spacing:.01em;
+  margin-right:.16em;
+  position:relative;
 }
 .hero-h-cp{
   display:inline-block;
   font-family:'Cormorant Garamond',serif;
   font-weight:600;font-style:normal;
-  font-size:clamp(30px,3.6vw,60px);
-  color:#2f5590;
-  letter-spacing:-.005em;
+  font-size:clamp(30px,3.5vw,58px);
+  background:linear-gradient(155deg,#12294f 0%,#2f5590 60%,#4a7bc4 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  letter-spacing:.01em;
 }
 .hero-h-jp{
-  display:flex;align-items:center;justify-content:center;gap:18px;
+  display:flex;align-items:center;justify-content:center;gap:16px;
   font-family:'Noto Serif JP','Cormorant Garamond',serif;
   font-weight:600;
-  font-size:clamp(18px,2vw,30px);
-  color:#12294f;
-  letter-spacing:.04em;
-  margin-top:6px;
+  font-size:clamp(17px,1.9vw,28px);
+  letter-spacing:.16em;
+  margin-top:10px;
+}
+.hero-h-jp-text{
+  background:linear-gradient(155deg,#12294f 0%,#2f5590 60%,#4a7bc4 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
 }
 .hero-h-line{
-  display:inline-block;width:60px;height:9px;flex-shrink:0;
-  background-image:repeating-linear-gradient(to bottom, #12294f 0, #12294f 1.5px, transparent 1.5px, transparent 4px);
+  display:inline-block;width:44px;height:1px;flex-shrink:0;
+  background:linear-gradient(to right, transparent, #c8933a);
+  position:relative;
 }
+.hero-h-line::after{
+  content:'';position:absolute;top:-2px;width:5px;height:5px;border-radius:50%;background:#c8933a;
+}
+.hero-h-jp .hero-h-line:first-child::after{right:-2px;}
+.hero-h-jp .hero-h-line:last-child{background:linear-gradient(to left, transparent, #c8933a);}
+.hero-h-jp .hero-h-line:last-child::after{left:-2px;}
 @keyframes heroFadeUp{
   from{opacity:0;transform:translateY(24px)}
   to{opacity:1;transform:translateY(0)}
@@ -1348,7 +1361,7 @@ footer{
   <div class="hero-inner">
     <h1 class="hero-h">
       <span class="hero-h-fda">FDA</span><span class="hero-h-cp">Compliance Partner</span>
-      <span class="hero-h-jp"><span class="hero-h-line"></span>米国食品・化粧品輸出の専門家<span class="hero-h-line"></span></span>
+      <span class="hero-h-jp"><span class="hero-h-line"></span><span class="hero-h-jp-text">米国食品・化粧品輸出の専門家</span><span class="hero-h-line"></span></span>
     </h1>
     <!-- 左：テキスト -->
     <div class="hero-left">
