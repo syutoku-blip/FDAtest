@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://worldshift-inc.jp/fda/sitemap.xml
